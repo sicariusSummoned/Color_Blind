@@ -74,6 +74,12 @@ public class Controller2D : RaycastController
 
             if (hit)
             {
+                if (hit.collider.tag == "Kills Player")
+                {
+                    gameObject.SetActive(false);
+                    return;
+                }
+
                 if (hit.distance == 0)
                 {
                     continue;
@@ -175,6 +181,12 @@ public class Controller2D : RaycastController
 
             if (hit)
             {
+                if (hit.collider.tag == "Kills Player")
+                {
+                    gameObject.SetActive(false);
+                    return;
+                }
+
                 if (hit.collider.tag == "Through")
                 {
                     if (directionY == 1 || hit.distance == 0)
