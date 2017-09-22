@@ -7,4 +7,13 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/2D Platformer Controller/Scenes/Demo.unity
-    guid: 00000000000000000000000000000000
+    guid: 179199da6dc864e4cb49e95a559d3396
+  - enabled: 1
+    path: Assets/Scenes/1_1.unity
+    guid: dd21c9da6616c8149b77afcdad6c4b39
+  - enabled: 1
+    path: Assets/Scenes/1_2.unity
+    guid: d18dae7620c7a3f4b9483cab525a2b87
+  - enabled: 1
+    path: Assets/Scenes/1_3.unity
+    guid: 8e83c4ce0fbcd0b4997e5a01b47e8b05

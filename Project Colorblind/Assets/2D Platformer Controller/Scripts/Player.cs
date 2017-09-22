@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     public Vector2 wallLeap;
 
     public Vector3 respawnPoint;
+    public LevelManager gameLevelManager;
 
     public bool canDoubleJump;
     private bool isDoubleJumping = false;
@@ -43,6 +44,7 @@ public class Player : MonoBehaviour
         minJumpVelocity = Mathf.Sqrt(2 * Mathf.Abs(gravity) * minJumpHeight);
 
         respawnPoint = transform.position;
+        gameLevelManager = FindObjectOfType<LevelManager>();
     }
 
     private void Update()
@@ -144,11 +146,11 @@ public class Player : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "FallDetector")
         {
-            transform.position = respawnPoint;
+            gameLevelManager.Respawn();
         }
         if(other.tag == "Checkpoint")
         {
