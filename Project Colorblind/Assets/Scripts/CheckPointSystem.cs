@@ -21,9 +21,9 @@ public class CheckPointSystem : MonoBehaviour {
 		
 	}
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if(collision.tag == "Player")
+        if(other.tag == "Player")
         {
             checkpointSpriteRenderer.sprite = activatedPoint;
             checkpointReached = true;
