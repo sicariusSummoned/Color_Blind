@@ -1,8 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerColor.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SeeSawColorChange.cs">
     <Files>
-      <File FileName="Assets\Scripts\PlayerColor.cs" Line="14" Column="16" />
+      <File FileName="Assets\Scripts\PlayerColor.cs" Line="11" Column="17" />
+      <File FileName="Assets\Scripts\SeeSawColorChange.cs" Line="93" Column="1" />
+      <File FileName="Assets\2D Platformer Controller\Scripts\Player.cs" Line="99" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
