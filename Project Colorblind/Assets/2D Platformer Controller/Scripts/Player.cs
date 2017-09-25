@@ -53,7 +53,11 @@ public class Player : MonoBehaviour
             velocity.y = 0f;
         }
     }
-
+	public Vector3 Velocity
+	{
+		get{ return velocity; }
+		set{ velocity = value; }
+	}
     public void SetDirectionalInput(Vector2 input)
     {
         directionalInput = input;
