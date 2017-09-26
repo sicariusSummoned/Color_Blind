@@ -168,6 +168,7 @@ public class Controller2D : RaycastController
 
     private void VerticalCollisions(ref Vector2 moveAmount)
     {
+        this.gameObject.GetComponent<PlayerColor>().OnSeeSaw = false;
         float directionY = Mathf.Sign(moveAmount.y);
         float rayLength = Mathf.Abs(moveAmount.y) + skinWidth;
 
@@ -181,11 +182,21 @@ public class Controller2D : RaycastController
 
             if (hit)
             {
+                if (hit.collider.tag == "SeeSaw")
+                {
+                    this.gameObject.GetComponent<PlayerColor>().OnSeeSaw = true;
+                }
+                else if(hit.collider.tag != "SeeSaw")
+                {
+                    this.gameObject.GetComponent<PlayerColor>().OnSeeSaw = false;
+                    
+                }
                 if (hit.collider.tag == "Kills Player")
                 {
                     gameObject.SetActive(false);
                     return;
                 }
+              
 
                 if (hit.collider.tag == "Through")
                 {

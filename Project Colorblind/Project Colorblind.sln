@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project Colorblind", "Project Colorblind.csproj", "{1E8763BF-F9FF-23A1-64FD-C1AFD0A0DE1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project Colorblind.Editor", "Project Colorblind.Editor.csproj", "{64C6FBE2-E30B-E169-B549-8E0A5506FEDA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E8763BF-F9FF-23A1-64FD-C1AFD0A0DE1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E8763BF-F9FF-23A1-64FD-C1AFD0A0DE1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E8763BF-F9FF-23A1-64FD-C1AFD0A0DE1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E8763BF-F9FF-23A1-64FD-C1AFD0A0DE1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64C6FBE2-E30B-E169-B549-8E0A5506FEDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64C6FBE2-E30B-E169-B549-8E0A5506FEDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64C6FBE2-E30B-E169-B549-8E0A5506FEDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64C6FBE2-E30B-E169-B549-8E0A5506FEDA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

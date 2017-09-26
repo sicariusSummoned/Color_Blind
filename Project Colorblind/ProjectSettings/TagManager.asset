@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Through
   - Kills Player
+  - Checkpoint
+  - FallDetector
+  - SeeSaw
   layers:
   - Default
   - TransparentFX
