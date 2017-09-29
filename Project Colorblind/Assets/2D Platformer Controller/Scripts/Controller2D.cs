@@ -3,6 +3,7 @@
 public class Controller2D : RaycastController
 {
     public float fallingThroughPlatformResetTimer = 0.1f;
+    public float applyJumpForce = 2.0f;
     private float maxClimbAngle = 80f;
     private float maxDescendAngle = 80f;
 
@@ -196,7 +197,14 @@ public class Controller2D : RaycastController
                     gameObject.SetActive(false);
                     return;
                 }
-              
+              if(hit.collider.tag=="JumpPad")
+                {
+                    Vector3 temp = this.gameObject.GetComponent<Player>().Velocity;
+                    temp.y += -(this.gameObject.GetComponent<Player>().Gravity) * Time.deltaTime * applyJumpForce;
+                    this.gameObject.GetComponent<Player>().Velocity = temp;
+
+                    //this.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y+applyJumpForce, this.gameObject.transform.position.z);
+                }
 
                 if (hit.collider.tag == "Through")
                 {

@@ -9,6 +9,7 @@ TagManager:
   - Checkpoint
   - FallDetector
   - SeeSaw
+  - JumpPad
   layers:
   - Default
   - TransparentFX

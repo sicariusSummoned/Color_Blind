@@ -47,6 +47,16 @@ public class Player : MonoBehaviour
         gameLevelManager = FindObjectOfType<LevelManager>();
     }
 
+    public Vector3 Velocity
+    {
+        get { return velocity; }
+        set { velocity = value; }
+    }
+    public float Gravity
+    {
+        get { return gravity; }
+        
+    }
     private void Update()
     {
         CalculateVelocity();
