@@ -196,6 +196,10 @@ public class Controller2D : RaycastController
                     gameObject.SetActive(false);
                     return;
                 }
+                else if (hit.collider.tag == "FadeBlock")
+                {
+                    hit.collider.gameObject.GetComponent<FadeBlock>().Activate();
+                }
               
 
                 if (hit.collider.tag == "Through")
