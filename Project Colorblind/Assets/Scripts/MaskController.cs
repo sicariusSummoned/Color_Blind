@@ -5,15 +5,28 @@ using UnityEngine;
 public class MaskController : MonoBehaviour {
     public enum MASK_COLOR { Red, Green, Blue };
     public MASK_COLOR myColor;
+    private string maskButton = "_CycleMask";
+    private string horizAxis = "_Horizontal";
+    private string vertAxis = "_Vertical";
+    
+    private int index = 0;
     public Sprite[] sprites;
     private SpriteMask myMask;
+
     private Transform myTransform;
-    private int index = 0;
+    private Vector2 targetVector;
+    private Vector2 startVector = Vector2.up;
+
+    private Quaternion myRotation;
+    private Quaternion targetRotation;
+
+    public float rotationSpeed = 150.0f;
+
     private bool wasDown = false;
 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         myMask = GetComponent<SpriteMask>();
         myTransform = GetComponent<Transform>();
 	}
@@ -23,48 +36,17 @@ public class MaskController : MonoBehaviour {
         switch (myColor)
         {
             case MASK_COLOR.Red:
-                if (Input.GetAxis("P1_CycleMask") > 0)
-                {
-                    if (!wasDown)
-                    {
-                        CycleActiveSprite();
-                        wasDown = true;
-                    }
-                }
-                else
-                {
-                    wasDown = false;
-                }
+                ProcessInput("P1");
                 break;
             case MASK_COLOR.Green:
-                if(Input.GetAxis("P2_CycleMask") > 0)
-                {
-                    if (!wasDown)
-                    {
-                        CycleActiveSprite();
-                        wasDown = true;
-                    }
-                }
-                else
-                {
-                    wasDown = false;
-                }
+                ProcessInput("P2");
                 break;
             case MASK_COLOR.Blue:
-                if(Input.GetAxis("P3_CycleMask")> 0)
-                {
-                    if (!wasDown)
-                    {
-                        CycleActiveSprite();
-                        wasDown = true;
-                    }
-                }
-                else
-                {
-                    wasDown = false;
-                }
+                ProcessInput("P3");
                 break;
         }
+        LerpToTarget();
+
 	}
 
     void CycleActiveSprite()
@@ -93,4 +75,40 @@ public class MaskController : MonoBehaviour {
             Debug.LogError("Index out of bounds");
         }
     }
+
+    void LerpToTarget()
+    {
+        float step = rotationSpeed * Time.deltaTime;
+
+        targetRotation =  Quaternion.AngleAxis(Vector2.SignedAngle(startVector, targetVector),Vector3.forward);
+
+        myTransform.rotation = Quaternion.RotateTowards(myTransform.rotation, targetRotation, step);
+    }
+
+    void ProcessInput(string playerString)
+    {
+        string buttonString = playerString + maskButton;
+        string horizString = playerString + horizAxis;
+        string vertString = playerString + vertAxis;
+
+
+        if (Input.GetAxis(buttonString) > 0)
+        {
+            if (!wasDown)
+            {
+                CycleActiveSprite();
+                wasDown = true;
+            }
+        }
+        else
+        {
+            wasDown = false;
+        }
+
+        if (Input.GetAxis(horizString) != 0 || Input.GetAxis(vertString) != 0)
+        {
+            targetVector = new Vector2(Input.GetAxis(horizString), Input.GetAxis(vertString));
+        }
+    }
+   
 }
