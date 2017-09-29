@@ -9,6 +9,7 @@ public class MaskController : MonoBehaviour {
     private SpriteMask myMask;
     private Transform myTransform;
     private int index = 0;
+    private bool wasDown = false;
 
 
 	// Use this for initialization
@@ -24,19 +25,43 @@ public class MaskController : MonoBehaviour {
             case MASK_COLOR.Red:
                 if (Input.GetAxis("P1_CycleMask") > 0)
                 {
-                    CycleActiveSprite();
+                    if (!wasDown)
+                    {
+                        CycleActiveSprite();
+                        wasDown = true;
+                    }
+                }
+                else
+                {
+                    wasDown = false;
                 }
                 break;
             case MASK_COLOR.Green:
                 if(Input.GetAxis("P2_CycleMask") > 0)
                 {
-                    CycleActiveSprite();
+                    if (!wasDown)
+                    {
+                        CycleActiveSprite();
+                        wasDown = true;
+                    }
+                }
+                else
+                {
+                    wasDown = false;
                 }
                 break;
             case MASK_COLOR.Blue:
                 if(Input.GetAxis("P3_CycleMask")> 0)
                 {
-                    CycleActiveSprite();
+                    if (!wasDown)
+                    {
+                        CycleActiveSprite();
+                        wasDown = true;
+                    }
+                }
+                else
+                {
+                    wasDown = false;
                 }
                 break;
         }
