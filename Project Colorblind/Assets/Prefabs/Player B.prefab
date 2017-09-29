@@ -9,48 +9,49 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1749454491980852}
+  m_RootGameObject: {fileID: 1188218042466820}
   m_IsPrefabParent: 1
---- !u!1 &1749454491980852
+--- !u!1 &1188218042466820
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4439262697129806}
-  - component: {fileID: 33584357329681638}
-  - component: {fileID: 23471057162932778}
-  - component: {fileID: 61306234491881128}
-  - component: {fileID: 114552251211703972}
-  - component: {fileID: 114940883547886772}
-  - component: {fileID: 114118153672212884}
+  - component: {fileID: 4577798703256666}
+  - component: {fileID: 33789952210235532}
+  - component: {fileID: 23069734326653580}
+  - component: {fileID: 61903182860130510}
+  - component: {fileID: 114385126546171818}
+  - component: {fileID: 114199848423079286}
+  - component: {fileID: 114681345679561342}
+  - component: {fileID: 114827697640766076}
   m_Layer: 8
-  m_Name: Player 1
+  m_Name: Player B
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4439262697129806
+--- !u!4 &4577798703256666
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1749454491980852}
+  m_GameObject: {fileID: 1188218042466820}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.5, y: 3.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23471057162932778
+--- !u!23 &23069734326653580
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1749454491980852}
+  m_GameObject: {fileID: 1188218042466820}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -77,19 +78,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33584357329681638
+--- !u!33 &33789952210235532
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1749454491980852}
+  m_GameObject: {fileID: 1188218042466820}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!61 &61306234491881128
+--- !u!61 &61903182860130510
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1749454491980852}
+  m_GameObject: {fileID: 1188218042466820}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -109,32 +110,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &114118153672212884
+--- !u!114 &114199848423079286
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1749454491980852}
+  m_GameObject: {fileID: 1188218042466820}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21abc4c9fcee4ca418ece364c442f238, type: 3}
+  m_Script: {fileID: 11500000, guid: 958b16cec60dadd4d885006f5acaa8d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxJumpHeight: 2.5
-  minJumpHeight: 0.25
-  timeToJumpApex: 0.5
-  wallJumpClimb: {x: 7.5, y: 16}
-  wallJumpOff: {x: 8.5, y: 7}
-  wallLeap: {x: 18, y: 17}
-  canDoubleJump: 0
-  wallSlideSpeedMax: 3
-  wallStickTime: 0.25
---- !u!114 &114552251211703972
+  m_horizontal: P3_Horizontal
+  m_vertical: P3_Vertical
+  m_jump: P3_Jump
+--- !u!114 &114385126546171818
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1749454491980852}
+  m_GameObject: {fileID: 1188218042466820}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e8f4067ca76444458b6d383f5580212, type: 3}
@@ -150,17 +145,35 @@ MonoBehaviour:
   coll: {fileID: 0}
   fallingThroughPlatformResetTimer: 0.1
   playerInput: {x: 0, y: 0}
---- !u!114 &114940883547886772
+--- !u!114 &114681345679561342
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1749454491980852}
+  m_GameObject: {fileID: 1188218042466820}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 958b16cec60dadd4d885006f5acaa8d8, type: 3}
+  m_Script: {fileID: 11500000, guid: 21abc4c9fcee4ca418ece364c442f238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_horizontal: P1_Horizontal
-  m_vertical: P1_Vertical
-  m_jump: P1_Jump
+  maxJumpHeight: 2.5
+  minJumpHeight: 0.25
+  timeToJumpApex: 0.5
+  wallJumpClimb: {x: 7.5, y: 16}
+  wallJumpOff: {x: 8.5, y: 7}
+  wallLeap: {x: 18, y: 17}
+  canDoubleJump: 0
+  wallSlideSpeedMax: 3
+  wallStickTime: 0.25
+--- !u!114 &114827697640766076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1188218042466820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de235ef2c64153443823bea16615d723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rgbSwitch: 2
