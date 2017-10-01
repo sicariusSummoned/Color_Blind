@@ -162,6 +162,8 @@ MonoBehaviour:
   wallJumpClimb: {x: 7.5, y: 16}
   wallJumpOff: {x: 8.5, y: 7}
   wallLeap: {x: 18, y: 17}
+  respawnPoint: {x: 0, y: 0, z: 0}
+  gameLevelManager: {fileID: 0}
   canDoubleJump: 0
   wallSlideSpeedMax: 3
   wallStickTime: 0.25
