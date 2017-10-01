@@ -30,14 +30,19 @@ public class Player : MonoBehaviour
     private Vector3 velocity;
     private float velocityXSmoothing;
 
+
+
     private Controller2D controller;
 
     private Vector2 directionalInput;
     private bool wallSliding;
     private int wallDirX;
+	//tells if the player is on a jump pad
+	private bool onPad;
 
     private void Start()
     {
+		onPad = false;
         controller = GetComponent<Controller2D>();
         gravity = -(2 * maxJumpHeight) / Mathf.Pow(timeToJumpApex, 2);
         maxJumpVelocity = Mathf.Abs(gravity) * timeToJumpApex;
@@ -46,7 +51,11 @@ public class Player : MonoBehaviour
         respawnPoint = transform.position;
         gameLevelManager = FindObjectOfType<LevelManager>();
     }
+	public bool OnPad{
+		get{ return onPad; }
+		set{ onPad = value; }
 
+	}
     public Vector3 Velocity
     {
         get { return velocity; }
@@ -64,7 +73,7 @@ public class Player : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime, directionalInput);
 
-        if (controller.collisions.above || controller.collisions.below)
+		if (controller.collisions.above || controller.collisions.below && onPad==false)
         {
             velocity.y = 0f;
         }
@@ -74,6 +83,10 @@ public class Player : MonoBehaviour
     {
         directionalInput = input;
     }
+
+	public void JumpPad(){
+		velocity.y = maxJumpVelocity * 2;
+	}
 
     public void OnJumpInputDown()
     {

@@ -7,6 +7,10 @@ public class Controller2D : RaycastController
     private float maxClimbAngle = 80f;
     private float maxDescendAngle = 80f;
 
+	private Player m_player;
+
+
+
     public CollisionInfo collisions;
     [HideInInspector]
     public Vector2 playerInput;
@@ -14,9 +18,11 @@ public class Controller2D : RaycastController
     public override void Start()
     {
         base.Start();
-
+		m_player = GetComponent<Player>();
         collisions.faceDir = 1;
     }
+
+
 
     public void Move(Vector2 moveAmount, bool standingOnPlatform = false)
     {
@@ -197,14 +203,15 @@ public class Controller2D : RaycastController
                     gameObject.SetActive(false);
                     return;
                 }
-              if(hit.collider.tag=="JumpPad")
-                {
-                    Vector3 temp = this.gameObject.GetComponent<Player>().Velocity;
-                    temp.y += -(this.gameObject.GetComponent<Player>().Gravity) * Time.deltaTime * applyJumpForce;
-                    this.gameObject.GetComponent<Player>().Velocity = temp;
+				if (hit.collider.tag == "JumpPad") {
+					m_player.OnPad = true;
+					m_player.JumpPad ();
 
-                    //this.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y+applyJumpForce, this.gameObject.transform.position.z);
-                }
+
+					//this.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y+applyJumpForce, this.gameObject.transform.position.z);
+				} else if (hit.collider.tag != "JumpPad") {
+					m_player.OnPad = false;
+				}
 
                 if (hit.collider.tag == "Through")
                 {
