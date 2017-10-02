@@ -11,6 +11,9 @@ public class EnemyAI : MonoBehaviour {
     Transform currentPatrolPoint;
     int currentPatrolIndex;
 
+    public Transform target;
+    public float chaseRange;
+
 
 	// Use this for initialization
 	void Start () {
@@ -43,5 +46,18 @@ public class EnemyAI : MonoBehaviour {
 
         Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, q, 180f);
+
+
+        //Chasing Player AI
+        float distanceToTarget = Vector3.Distance(transform.position, target.position);
+        if(distanceToTarget < chaseRange)
+        {
+            Vector3 targetDir = target.position - transform.position;
+            float angle1 = Mathf.Atan2(targetDir.y, targetDir.x) * Mathf.Rad2Deg - 90f;
+            Quaternion q1 = Quaternion.AngleAxis(angle1, Vector3.forward);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, q1, 180);
+
+            transform.Translate(Vector3.up * Time.deltaTime * speed);
+        }
 	}
 }
