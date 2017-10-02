@@ -106,7 +106,7 @@ public class MaskController : MonoBehaviour {
 
         if (Input.GetAxis(horizString) != 0 || Input.GetAxis(vertString) != 0)
         {
-            targetVector = new Vector2(Input.GetAxis(horizString), Input.GetAxis(vertString));
+            targetVector = new Vector2(Input.GetAxis(horizString), Input.GetAxis(vertString)*-1);
             LerpToTarget();
 
         }
