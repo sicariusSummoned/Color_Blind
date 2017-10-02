@@ -6,8 +6,8 @@ public class MaskController : MonoBehaviour {
     public enum MASK_COLOR { Red, Green, Blue };
     public MASK_COLOR myColor;
     private string maskButton = "_CycleMask";
-    private string horizAxis = "_Horizontal";
-    private string vertAxis = "_Vertical";
+    private string lookHorizAxis = "_Look_Horizontal";
+    private string lookVertAxis = "_Look_Vertical";
     
     private int index = 0;
     public Sprite[] sprites;
@@ -45,7 +45,6 @@ public class MaskController : MonoBehaviour {
                 ProcessInput("P3");
                 break;
         }
-        LerpToTarget();
 
 	}
 
@@ -88,8 +87,8 @@ public class MaskController : MonoBehaviour {
     void ProcessInput(string playerString)
     {
         string buttonString = playerString + maskButton;
-        string horizString = playerString + horizAxis;
-        string vertString = playerString + vertAxis;
+        string horizString = playerString + lookHorizAxis;
+        string vertString = playerString + lookVertAxis;
 
 
         if (Input.GetAxis(buttonString) > 0)
@@ -108,6 +107,12 @@ public class MaskController : MonoBehaviour {
         if (Input.GetAxis(horizString) != 0 || Input.GetAxis(vertString) != 0)
         {
             targetVector = new Vector2(Input.GetAxis(horizString), Input.GetAxis(vertString));
+            LerpToTarget();
+
+        }
+        else
+        {
+            targetVector = new Vector2(0, 0);
         }
     }
    
