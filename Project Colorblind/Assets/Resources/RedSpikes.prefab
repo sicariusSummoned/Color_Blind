@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4380326046975424}
   - component: {fileID: 61045498679698938}
+  - component: {fileID: 114752616678273058}
   m_Layer: 9
   m_Name: RedSpikes
   m_TagString: Kills Player
@@ -124,6 +125,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114752616678273058
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1041139513736036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b90fe055f195f54c897f6f57f8c594e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myColor: 0
+  myType: 2
 --- !u!212 &212569115072200982
 SpriteRenderer:
   m_ObjectHideFlags: 1
