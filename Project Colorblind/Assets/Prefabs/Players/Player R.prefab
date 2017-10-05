@@ -25,7 +25,11 @@ GameObject:
   - component: {fileID: 114552251211703972}
   - component: {fileID: 114940883547886772}
   - component: {fileID: 114118153672212884}
+<<<<<<< HEAD:Project Colorblind/Assets/Prefabs/Players/Player R.prefab
   - component: {fileID: 114860062771400738}
+=======
+  - component: {fileID: 114914697107225184}
+>>>>>>> 2ebb43cb431364f5d574b48ee2ee597ee1447d82:Project Colorblind/Assets/Prefabs/Player 1.prefab
   m_Layer: 8
   m_Name: Player R
   m_TagString: Player
@@ -153,7 +157,11 @@ MonoBehaviour:
   coll: {fileID: 0}
   fallingThroughPlatformResetTimer: 0.1
   playerInput: {x: 0, y: 0}
+<<<<<<< HEAD:Project Colorblind/Assets/Prefabs/Players/Player R.prefab
 --- !u!114 &114860062771400738
+=======
+--- !u!114 &114914697107225184
+>>>>>>> 2ebb43cb431364f5d574b48ee2ee597ee1447d82:Project Colorblind/Assets/Prefabs/Player 1.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

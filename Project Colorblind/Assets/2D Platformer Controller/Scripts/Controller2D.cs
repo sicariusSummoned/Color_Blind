@@ -76,7 +76,7 @@ public class Controller2D : RaycastController
             {
                 if (hit.collider.tag == "Kills Player")
                 {
-                    gameObject.SetActive(false);
+                    gameObject.GetComponent<Player>().Die();
                     return;
                 }
 
@@ -193,7 +193,7 @@ public class Controller2D : RaycastController
                 }
                 if (hit.collider.tag == "Kills Player")
                 {
-                    gameObject.SetActive(false);
+                    gameObject.GetComponent<Player>().Die();
                     return;
                 }
               
