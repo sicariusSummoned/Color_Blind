@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     private float accelerationTimeGrounded = .1f;
     private float moveSpeed = 6f;
 
+	public float jumpPadHeight=8f;
+
     public Vector2 wallJumpClimb;
     public Vector2 wallJumpOff;
     public Vector2 wallLeap;
@@ -85,7 +87,7 @@ public class Player : MonoBehaviour
     }
 
 	public void JumpPad(){
-		velocity.y = maxJumpVelocity * 2;
+		velocity.y = jumpPadHeight;
 	}
 
     public void OnJumpInputDown()

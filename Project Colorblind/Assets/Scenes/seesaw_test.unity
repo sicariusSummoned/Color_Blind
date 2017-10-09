@@ -246,6 +246,11 @@ Prefab:
       propertyPath: applyJumpForce
       value: 0.001
       objectReference: {fileID: 0}
+    - target: {fileID: 114972709274619316, guid: d7bd70357c2c3b34a80e66e07f6245a6,
+        type: 2}
+      propertyPath: jumpPadHeight
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7bd70357c2c3b34a80e66e07f6245a6, type: 2}
   m_IsPrefabParent: 0
@@ -337,6 +342,11 @@ Prefab:
     - target: {fileID: 4577798703256666, guid: cd628d959ec95df459fe1c5cc006d4e2, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114681345679561342, guid: cd628d959ec95df459fe1c5cc006d4e2,
+        type: 2}
+      propertyPath: jumpPadHeight
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd628d959ec95df459fe1c5cc006d4e2, type: 2}
@@ -462,6 +472,11 @@ Prefab:
         type: 2}
       propertyPath: m_UsedByComposite
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114118153672212884, guid: c26be7d396a58ba4d939126bf019e664,
+        type: 2}
+      propertyPath: jumpPadHeight
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c26be7d396a58ba4d939126bf019e664, type: 2}
