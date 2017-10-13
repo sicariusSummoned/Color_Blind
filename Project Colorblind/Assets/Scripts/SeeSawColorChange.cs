@@ -4,6 +4,10 @@ using UnityEngine;
 //this is for changing the seeSaw block to change color
 public class SeeSawColorChange : MonoBehaviour {
 
+	//the base starting color vector.
+	private Vector3 startingColor;
+	private Vector3 changingVector;
+
 	//the starting color values for the swwSaw material.
 	private float startRed;
 	private float startBlue;
@@ -31,6 +35,7 @@ public class SeeSawColorChange : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		spriteMaterial = spr_box.material;
+		//startingColor = spriteMaterial.color;
 		startBlue = spriteMaterial.color.b;
 		startGreen = spriteMaterial.color.g;
 		startRed = spriteMaterial.color.r;
@@ -46,7 +51,7 @@ public class SeeSawColorChange : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		/*
         if(p1 != null)
         {
             addColor(p1.rgbSwitch, p1.OnSeeSaw);
@@ -61,8 +66,12 @@ public class SeeSawColorChange : MonoBehaviour {
         }
 
         spriteMaterial.color = changingColor;
+        */
+
+
     }
 
+	/*
     void addColor(int color, bool addColor)
     {
       if(color == 0 && addColor == true && spriteMaterial.color.r < 255)
@@ -99,5 +108,5 @@ public class SeeSawColorChange : MonoBehaviour {
         Debug.Log(changingColor);
     }
 
-    
+    */
 }
