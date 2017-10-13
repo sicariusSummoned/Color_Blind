@@ -20,6 +20,9 @@ public class Player : MonoBehaviour
     public bool canDoubleJump;
     private bool isDoubleJumping = false;
 
+    private bool m_dead;
+    public bool Dead { get { return m_dead; } }
+
     public float wallSlideSpeedMax = 3f;
     public float wallStickTime = .25f;
     private float timeToWallUnstick;
@@ -146,15 +149,16 @@ public class Player : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    public void Die()
     {
-        if (other.tag == "FallDetector")
-        {
-            gameLevelManager.Respawn();
-        }
-        if(other.tag == "Checkpoint")
-        {
-            respawnPoint = other.transform.position;
-        }
+        m_dead = true;
+        gameObject.SetActive(false);
+    }
+
+    public void Respawn(Vector3 position)
+    {
+        m_dead = false;
+        transform.position = position;
+        gameObject.SetActive(true);
     }
 }
