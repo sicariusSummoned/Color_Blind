@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraMultiplePlayers4 : MonoBehaviour {
+public class CameraMultiplePlayers4 : MonoBehaviour
+{
     public float dampTime = 0.15f;
     private Vector3 velocity = Vector3.zero;
     public Transform target;
@@ -16,19 +17,6 @@ public class CameraMultiplePlayers4 : MonoBehaviour {
     public float camDistance;
     public float CamOffset;
     public float bounds;
-    void Awake()
-    {
-        //checking if there's already a game manager
-        if (cFollow == null)
-        {
-            DontDestroyOnLoad(gameObject);
-            cFollow = this;
-        }
-        else if (cFollow != this)
-        {
-            Destroy(gameObject);
-        }
-    }
 
     // Use this for initialization
     void Start()
@@ -93,8 +81,8 @@ public class CameraMultiplePlayers4 : MonoBehaviour {
         Midpoint = new Vector3(MidX, MidY, MidZ);
         if (target1)
         {
-            Vector3 point = camera.WorldToViewportPoint(Midpoint);
-            Vector3 delta = Midpoint - camera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, camDistance + CamOffset)); //(new Vector3(0.5, 0.5, point.z));
+            Vector3 point = Camera.main.WorldToViewportPoint(Midpoint);
+            Vector3 delta = Midpoint - Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, camDistance + CamOffset)); //(new Vector3(0.5, 0.5, point.z));
             Vector3 destination = transform.position + delta;
             transform.position = Vector3.SmoothDamp(transform.position, destination, ref velocity, dampTime);
         }
