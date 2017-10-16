@@ -17,3 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/1_3.unity
     guid: 8e83c4ce0fbcd0b4997e5a01b47e8b05
+  - enabled: 1
+    path: Assets/Scenes/color_calibration.unity
+    guid: 5c9e81f509a4e4941bf9957addd5a3f7
+  - enabled: 1
+    path: Assets/Scenes/James_1.unity
+    guid: e71e887e4808fa047951463f0f25fcfd
+  - enabled: 1
+    path: Assets/Scenes/Traitor_Test.unity
+    guid: 69cde081c96b3df4182bf04cddec931b

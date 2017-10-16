@@ -74,7 +74,9 @@ public class Controller2D : RaycastController
 
             if (hit)
             {
-                if (hit.collider.tag == "Kills Player")
+                if (hit.collider.tag == "RedKillsPlayer" ||
+                    hit.collider.tag == "GreenKillsPlayer" ||
+                    hit.collider.tag == "BlueKillsPlayer")
                 {
                     gameObject.GetComponent<Player>().Die();
                     return;
@@ -191,7 +193,10 @@ public class Controller2D : RaycastController
                     this.gameObject.GetComponent<PlayerColor>().OnSeeSaw = false;
                     
                 }
-                if (hit.collider.tag == "Kills Player")
+
+                if (hit.collider.tag == "RedKillsPlayer" ||
+                    hit.collider.tag == "GreenKillsPlayer" ||
+                    hit.collider.tag == "BlueKillsPlayer")
                 {
                     gameObject.GetComponent<Player>().Die();
                     return;
@@ -200,7 +205,6 @@ public class Controller2D : RaycastController
                 {
                     hit.collider.gameObject.GetComponent<FadeBlock>().Activate();
                 }
-              
 
                 if (hit.collider.tag == "Through")
                 {

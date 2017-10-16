@@ -10,6 +10,12 @@ TagManager:
   - FallDetector
   - SeeSaw
   - FadeBlock
+  - Red
+  - Green
+  - Blue
+  - RedKillsPlayer
+  - GreenKillsPlayer
+  - BlueKillsPlayer
   layers:
   - Default
   - TransparentFX

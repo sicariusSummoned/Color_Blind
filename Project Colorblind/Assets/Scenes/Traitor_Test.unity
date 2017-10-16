@@ -159,6 +159,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 1431950139505410, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
+      propertyPath: m_TagString
+      value: BlueKillsPlayer
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
   m_IsPrefabParent: 0
@@ -218,6 +222,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 1431950139505410, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
+      propertyPath: m_TagString
+      value: BlueKillsPlayer
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
   m_IsPrefabParent: 0
@@ -268,6 +276,10 @@ Prefab:
     - target: {fileID: 1041139513736036, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
       propertyPath: m_Name
       value: RedSpikes (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041139513736036, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
+      propertyPath: m_TagString
+      value: RedKillsPlayer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
@@ -328,6 +340,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1624518365854464, guid: 7117979fe08943945b7d8fa2b521853d, type: 2}
+      propertyPath: m_TagString
+      value: Green
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7117979fe08943945b7d8fa2b521853d, type: 2}
   m_IsPrefabParent: 0
@@ -383,6 +399,10 @@ Prefab:
       propertyPath: m_Name
       value: BlueSpikes (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1431950139505410, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
+      propertyPath: m_TagString
+      value: BlueKillsPlayer
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
   m_IsPrefabParent: 0
@@ -417,7 +437,7 @@ Transform:
   m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &151444993
 Prefab:
@@ -465,6 +485,10 @@ Prefab:
     - target: {fileID: 4373869368471950, guid: 5ef2ec62534467f4ba5a3da2c4134943, type: 2}
       propertyPath: m_LocalScale.x
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777543153591776, guid: 5ef2ec62534467f4ba5a3da2c4134943, type: 2}
+      propertyPath: m_TagString
+      value: Blue
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ef2ec62534467f4ba5a3da2c4134943, type: 2}
@@ -521,6 +545,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1802980108821172, guid: 73b5c2eecadda9946b692afd105434bd, type: 2}
+      propertyPath: m_TagString
+      value: GreenKillsPlayer
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 73b5c2eecadda9946b692afd105434bd, type: 2}
   m_IsPrefabParent: 0
@@ -575,6 +603,10 @@ Prefab:
     - target: {fileID: 1431950139505410, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
       propertyPath: m_Name
       value: BlueSpikes (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1431950139505410, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
+      propertyPath: m_TagString
+      value: BlueKillsPlayer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
@@ -635,6 +667,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1937968179715564, guid: fde720a7b05717844949e4c257610fff, type: 2}
+      propertyPath: m_TagString
+      value: Red
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fde720a7b05717844949e4c257610fff, type: 2}
   m_IsPrefabParent: 0
@@ -690,6 +726,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 1041139513736036, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
+      propertyPath: m_TagString
+      value: RedKillsPlayer
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
   m_IsPrefabParent: 0
@@ -735,7 +775,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4907290028782964, guid: a816c0d0c4c56cb459f1d8617a6d8c7b, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114135250655830042, guid: a816c0d0c4c56cb459f1d8617a6d8c7b,
         type: 2}
@@ -805,6 +845,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1.0000005
       objectReference: {fileID: 0}
+    - target: {fileID: 1802980108821172, guid: 73b5c2eecadda9946b692afd105434bd, type: 2}
+      propertyPath: m_TagString
+      value: GreenKillsPlayer
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 73b5c2eecadda9946b692afd105434bd, type: 2}
   m_IsPrefabParent: 0
@@ -860,6 +904,10 @@ Prefab:
       propertyPath: m_Name
       value: BlueSpikes (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1431950139505410, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
+      propertyPath: m_TagString
+      value: BlueKillsPlayer
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
   m_IsPrefabParent: 0
@@ -914,6 +962,10 @@ Prefab:
     - target: {fileID: 4373869368471950, guid: 5ef2ec62534467f4ba5a3da2c4134943, type: 2}
       propertyPath: m_LocalScale.x
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777543153591776, guid: 5ef2ec62534467f4ba5a3da2c4134943, type: 2}
+      propertyPath: m_TagString
+      value: Blue
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ef2ec62534467f4ba5a3da2c4134943, type: 2}
@@ -1059,6 +1111,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1802980108821172, guid: 73b5c2eecadda9946b692afd105434bd, type: 2}
+      propertyPath: m_TagString
+      value: GreenKillsPlayer
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 73b5c2eecadda9946b692afd105434bd, type: 2}
   m_IsPrefabParent: 0
@@ -1152,6 +1208,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 1802980108821172, guid: 73b5c2eecadda9946b692afd105434bd, type: 2}
+      propertyPath: m_TagString
+      value: GreenKillsPlayer
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 73b5c2eecadda9946b692afd105434bd, type: 2}
   m_IsPrefabParent: 0
@@ -1206,6 +1266,10 @@ Prefab:
     - target: {fileID: 4373869368471950, guid: 5ef2ec62534467f4ba5a3da2c4134943, type: 2}
       propertyPath: m_LocalScale.x
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777543153591776, guid: 5ef2ec62534467f4ba5a3da2c4134943, type: 2}
+      propertyPath: m_TagString
+      value: Blue
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ef2ec62534467f4ba5a3da2c4134943, type: 2}
@@ -1266,6 +1330,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1624518365854464, guid: 7117979fe08943945b7d8fa2b521853d, type: 2}
+      propertyPath: m_TagString
+      value: Green
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7117979fe08943945b7d8fa2b521853d, type: 2}
   m_IsPrefabParent: 0
@@ -1320,6 +1388,10 @@ Prefab:
     - target: {fileID: 1802980108821172, guid: 73b5c2eecadda9946b692afd105434bd, type: 2}
       propertyPath: m_Name
       value: GreenSpikes (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1802980108821172, guid: 73b5c2eecadda9946b692afd105434bd, type: 2}
+      propertyPath: m_TagString
+      value: GreenKillsPlayer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 73b5c2eecadda9946b692afd105434bd, type: 2}
@@ -1380,6 +1452,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1624518365854464, guid: 7117979fe08943945b7d8fa2b521853d, type: 2}
+      propertyPath: m_TagString
+      value: Green
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7117979fe08943945b7d8fa2b521853d, type: 2}
   m_IsPrefabParent: 0
@@ -1434,6 +1510,10 @@ Prefab:
     - target: {fileID: 1802980108821172, guid: 73b5c2eecadda9946b692afd105434bd, type: 2}
       propertyPath: m_Name
       value: GreenSpikes (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1802980108821172, guid: 73b5c2eecadda9946b692afd105434bd, type: 2}
+      propertyPath: m_TagString
+      value: GreenKillsPlayer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 73b5c2eecadda9946b692afd105434bd, type: 2}
@@ -1494,6 +1574,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 1431950139505410, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
+      propertyPath: m_TagString
+      value: BlueKillsPlayer
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
   m_IsPrefabParent: 0
@@ -1553,6 +1637,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1624518365854464, guid: 7117979fe08943945b7d8fa2b521853d, type: 2}
+      propertyPath: m_TagString
+      value: Green
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7117979fe08943945b7d8fa2b521853d, type: 2}
   m_IsPrefabParent: 0
@@ -1604,6 +1692,10 @@ Prefab:
       propertyPath: m_Name
       value: RedSpikes (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1041139513736036, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
+      propertyPath: m_TagString
+      value: RedKillsPlayer
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
   m_IsPrefabParent: 0
@@ -1654,6 +1746,10 @@ Prefab:
     - target: {fileID: 1041139513736036, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
       propertyPath: m_Name
       value: RedSpikes (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041139513736036, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
+      propertyPath: m_TagString
+      value: RedKillsPlayer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
@@ -1710,6 +1806,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1777543153591776, guid: 5ef2ec62534467f4ba5a3da2c4134943, type: 2}
+      propertyPath: m_TagString
+      value: Blue
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ef2ec62534467f4ba5a3da2c4134943, type: 2}
   m_IsPrefabParent: 0
@@ -1765,6 +1865,10 @@ Prefab:
       propertyPath: m_Name
       value: GreenSpikes (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1802980108821172, guid: 73b5c2eecadda9946b692afd105434bd, type: 2}
+      propertyPath: m_TagString
+      value: GreenKillsPlayer
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 73b5c2eecadda9946b692afd105434bd, type: 2}
   m_IsPrefabParent: 0
@@ -1819,6 +1923,10 @@ Prefab:
     - target: {fileID: 1802980108821172, guid: 73b5c2eecadda9946b692afd105434bd, type: 2}
       propertyPath: m_Name
       value: GreenSpikes (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1802980108821172, guid: 73b5c2eecadda9946b692afd105434bd, type: 2}
+      propertyPath: m_TagString
+      value: GreenKillsPlayer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 73b5c2eecadda9946b692afd105434bd, type: 2}
@@ -1878,6 +1986,10 @@ Prefab:
     - target: {fileID: 4577846819747048, guid: fde720a7b05717844949e4c257610fff, type: 2}
       propertyPath: m_LocalScale.y
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1937968179715564, guid: fde720a7b05717844949e4c257610fff, type: 2}
+      propertyPath: m_TagString
+      value: Red
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fde720a7b05717844949e4c257610fff, type: 2}
@@ -2003,6 +2115,10 @@ Prefab:
       propertyPath: m_Name
       value: BluePlatform (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1777543153591776, guid: 5ef2ec62534467f4ba5a3da2c4134943, type: 2}
+      propertyPath: m_TagString
+      value: Blue
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ef2ec62534467f4ba5a3da2c4134943, type: 2}
   m_IsPrefabParent: 0
@@ -2053,6 +2169,10 @@ Prefab:
     - target: {fileID: 1041139513736036, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
       propertyPath: m_Name
       value: RedSpikes (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041139513736036, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
+      propertyPath: m_TagString
+      value: RedKillsPlayer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
@@ -2164,6 +2284,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 1777543153591776, guid: 5ef2ec62534467f4ba5a3da2c4134943, type: 2}
+      propertyPath: m_TagString
+      value: Blue
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ef2ec62534467f4ba5a3da2c4134943, type: 2}
   m_IsPrefabParent: 0
@@ -2209,7 +2333,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4627545924058964, guid: cde3da712bc5f9a4b85d58bece8f50a3, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cde3da712bc5f9a4b85d58bece8f50a3, type: 2}
@@ -2257,6 +2381,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1777543153591776, guid: 5ef2ec62534467f4ba5a3da2c4134943, type: 2}
+      propertyPath: m_TagString
+      value: Blue
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ef2ec62534467f4ba5a3da2c4134943, type: 2}
   m_IsPrefabParent: 0
@@ -2303,6 +2431,10 @@ Prefab:
     - target: {fileID: 4380326046975424, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041139513736036, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
+      propertyPath: m_TagString
+      value: RedKillsPlayer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
@@ -2354,6 +2486,10 @@ Prefab:
     - target: {fileID: 1041139513736036, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
       propertyPath: m_Name
       value: RedSpikes (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041139513736036, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
+      propertyPath: m_TagString
+      value: RedKillsPlayer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
@@ -2410,6 +2546,10 @@ Prefab:
       propertyPath: m_Name
       value: BlueSpikes (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1431950139505410, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
+      propertyPath: m_TagString
+      value: BlueKillsPlayer
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
   m_IsPrefabParent: 0
@@ -2464,6 +2604,10 @@ Prefab:
     - target: {fileID: 1802980108821172, guid: 73b5c2eecadda9946b692afd105434bd, type: 2}
       propertyPath: m_Name
       value: GreenSpikes (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1802980108821172, guid: 73b5c2eecadda9946b692afd105434bd, type: 2}
+      propertyPath: m_TagString
+      value: GreenKillsPlayer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 73b5c2eecadda9946b692afd105434bd, type: 2}
@@ -2554,6 +2698,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 1431950139505410, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
+      propertyPath: m_TagString
+      value: BlueKillsPlayer
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
   m_IsPrefabParent: 0
@@ -2605,6 +2753,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1624518365854464, guid: 7117979fe08943945b7d8fa2b521853d, type: 2}
+      propertyPath: m_TagString
+      value: Green
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7117979fe08943945b7d8fa2b521853d, type: 2}
   m_IsPrefabParent: 0
@@ -2655,6 +2807,10 @@ Prefab:
     - target: {fileID: 1041139513736036, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
       propertyPath: m_Name
       value: RedSpikes (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041139513736036, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
+      propertyPath: m_TagString
+      value: RedKillsPlayer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
@@ -2713,6 +2869,10 @@ Prefab:
       propertyPath: m_Name
       value: RedSpikes (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1041139513736036, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
+      propertyPath: m_TagString
+      value: RedKillsPlayer
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
   m_IsPrefabParent: 0
@@ -2758,7 +2918,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4973099245206314, guid: 4e7163fe4bec74148b858267a6f2af15, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1420475470791248, guid: 4e7163fe4bec74148b858267a6f2af15, type: 2}
       propertyPath: m_IsActive
@@ -2813,6 +2973,10 @@ Prefab:
     - target: {fileID: 1431950139505410, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
       propertyPath: m_Name
       value: BlueSpikes (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1431950139505410, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
+      propertyPath: m_TagString
+      value: BlueKillsPlayer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
@@ -2877,6 +3041,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1.0000005
       objectReference: {fileID: 0}
+    - target: {fileID: 1431950139505410, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
+      propertyPath: m_TagString
+      value: BlueKillsPlayer
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
   m_IsPrefabParent: 0
@@ -2922,7 +3090,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4899106798716876, guid: 731587fcb9d0c0143ac0ba5d58f1f91b, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 731587fcb9d0c0143ac0ba5d58f1f91b, type: 2}
@@ -2974,6 +3142,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1802980108821172, guid: 73b5c2eecadda9946b692afd105434bd, type: 2}
+      propertyPath: m_TagString
+      value: GreenKillsPlayer
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 73b5c2eecadda9946b692afd105434bd, type: 2}
   m_IsPrefabParent: 0
@@ -3024,6 +3196,10 @@ Prefab:
     - target: {fileID: 1041139513736036, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
       propertyPath: m_Name
       value: RedSpikes (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041139513736036, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
+      propertyPath: m_TagString
+      value: RedKillsPlayer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
@@ -3084,6 +3260,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 1431950139505410, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
+      propertyPath: m_TagString
+      value: BlueKillsPlayer
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
   m_IsPrefabParent: 0
@@ -3129,7 +3309,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4893069222301774, guid: e8feca530b20e2f4bad40a948b6fa01f, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 114517591534128298, guid: e8feca530b20e2f4bad40a948b6fa01f,
         type: 2}
@@ -3186,7 +3366,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4885968676995178, guid: 21fc59a02dba54a4e8bd709a18dfe8e2, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 21fc59a02dba54a4e8bd709a18dfe8e2, type: 2}
@@ -3237,6 +3417,10 @@ Prefab:
     - target: {fileID: 1937968179715564, guid: fde720a7b05717844949e4c257610fff, type: 2}
       propertyPath: m_Name
       value: RedPlatform (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1937968179715564, guid: fde720a7b05717844949e4c257610fff, type: 2}
+      propertyPath: m_TagString
+      value: Red
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fde720a7b05717844949e4c257610fff, type: 2}
@@ -3297,6 +3481,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 1431950139505410, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
+      propertyPath: m_TagString
+      value: BlueKillsPlayer
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
   m_IsPrefabParent: 0
@@ -3342,7 +3530,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4993841288261780, guid: 2d202613b62bbe94f86aa54237ffe009, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114391730361821176, guid: 2d202613b62bbe94f86aa54237ffe009,
         type: 2}
@@ -3357,6 +3545,48 @@ Transform:
   m_PrefabParentObject: {fileID: 4993841288261780, guid: 2d202613b62bbe94f86aa54237ffe009,
     type: 2}
   m_PrefabInternal: {fileID: 1482174411}
+--- !u!1001 &1485034334
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4446852925076834, guid: 4ffad2b22e362f245b9ca99f7526d2f8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446852925076834, guid: 4ffad2b22e362f245b9ca99f7526d2f8, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446852925076834, guid: 4ffad2b22e362f245b9ca99f7526d2f8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446852925076834, guid: 4ffad2b22e362f245b9ca99f7526d2f8, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446852925076834, guid: 4ffad2b22e362f245b9ca99f7526d2f8, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446852925076834, guid: 4ffad2b22e362f245b9ca99f7526d2f8, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446852925076834, guid: 4ffad2b22e362f245b9ca99f7526d2f8, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446852925076834, guid: 4ffad2b22e362f245b9ca99f7526d2f8, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4ffad2b22e362f245b9ca99f7526d2f8, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1493499149
 GameObject:
   m_ObjectHideFlags: 0
@@ -3386,7 +3616,7 @@ Transform:
   - {fileID: 764504317}
   - {fileID: 992993687}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1496760638
 Prefab:
@@ -3435,6 +3665,10 @@ Prefab:
       propertyPath: m_Name
       value: BlueSpikes (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1431950139505410, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
+      propertyPath: m_TagString
+      value: BlueKillsPlayer
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
   m_IsPrefabParent: 0
@@ -3469,7 +3703,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1521710156 stripped
 MonoBehaviour:
@@ -3523,6 +3757,10 @@ Prefab:
     - target: {fileID: 4373869368471950, guid: 5ef2ec62534467f4ba5a3da2c4134943, type: 2}
       propertyPath: m_LocalScale.x
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777543153591776, guid: 5ef2ec62534467f4ba5a3da2c4134943, type: 2}
+      propertyPath: m_TagString
+      value: Blue
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ef2ec62534467f4ba5a3da2c4134943, type: 2}
@@ -3583,6 +3821,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1624518365854464, guid: 7117979fe08943945b7d8fa2b521853d, type: 2}
+      propertyPath: m_TagString
+      value: Green
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7117979fe08943945b7d8fa2b521853d, type: 2}
   m_IsPrefabParent: 0
@@ -3617,7 +3859,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1602612899
 Prefab:
@@ -3661,6 +3903,10 @@ Prefab:
     - target: {fileID: 1777543153591776, guid: 5ef2ec62534467f4ba5a3da2c4134943, type: 2}
       propertyPath: m_Name
       value: BluePlatform (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777543153591776, guid: 5ef2ec62534467f4ba5a3da2c4134943, type: 2}
+      propertyPath: m_TagString
+      value: Blue
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ef2ec62534467f4ba5a3da2c4134943, type: 2}
@@ -3721,6 +3967,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1937968179715564, guid: fde720a7b05717844949e4c257610fff, type: 2}
+      propertyPath: m_TagString
+      value: Red
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fde720a7b05717844949e4c257610fff, type: 2}
   m_IsPrefabParent: 0
@@ -3775,6 +4025,10 @@ Prefab:
     - target: {fileID: 1431950139505410, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
       propertyPath: m_Name
       value: BlueSpikes (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1431950139505410, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
+      propertyPath: m_TagString
+      value: BlueKillsPlayer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
@@ -3835,6 +4089,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1937968179715564, guid: fde720a7b05717844949e4c257610fff, type: 2}
+      propertyPath: m_TagString
+      value: Red
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fde720a7b05717844949e4c257610fff, type: 2}
   m_IsPrefabParent: 0
@@ -3889,6 +4147,10 @@ Prefab:
     - target: {fileID: 1431950139505410, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
       propertyPath: m_Name
       value: BlueSpikes (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1431950139505410, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
+      propertyPath: m_TagString
+      value: BlueKillsPlayer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
@@ -3953,6 +4215,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1.0000005
       objectReference: {fileID: 0}
+    - target: {fileID: 1041139513736036, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
+      propertyPath: m_TagString
+      value: RedKillsPlayer
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
   m_IsPrefabParent: 0
@@ -4011,6 +4277,10 @@ Prefab:
     - target: {fileID: 4534833094391768, guid: 7117979fe08943945b7d8fa2b521853d, type: 2}
       propertyPath: m_LocalScale.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624518365854464, guid: 7117979fe08943945b7d8fa2b521853d, type: 2}
+      propertyPath: m_TagString
+      value: Green
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7117979fe08943945b7d8fa2b521853d, type: 2}
@@ -4071,6 +4341,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1937968179715564, guid: fde720a7b05717844949e4c257610fff, type: 2}
+      propertyPath: m_TagString
+      value: Red
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fde720a7b05717844949e4c257610fff, type: 2}
   m_IsPrefabParent: 0
@@ -4121,6 +4395,10 @@ Prefab:
     - target: {fileID: 1041139513736036, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
       propertyPath: m_Name
       value: RedSpikes (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041139513736036, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
+      propertyPath: m_TagString
+      value: RedKillsPlayer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
@@ -4244,6 +4522,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 1431950139505410, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
+      propertyPath: m_TagString
+      value: BlueKillsPlayer
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
   m_IsPrefabParent: 0
@@ -4294,6 +4576,10 @@ Prefab:
     - target: {fileID: 4577846819747048, guid: fde720a7b05717844949e4c257610fff, type: 2}
       propertyPath: m_LocalScale.x
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1937968179715564, guid: fde720a7b05717844949e4c257610fff, type: 2}
+      propertyPath: m_TagString
+      value: Red
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fde720a7b05717844949e4c257610fff, type: 2}
@@ -4349,6 +4635,10 @@ Prefab:
     - target: {fileID: 1431950139505410, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
       propertyPath: m_Name
       value: BlueSpikes (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1431950139505410, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
+      propertyPath: m_TagString
+      value: BlueKillsPlayer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf02e8b230e5dfd4f9079ccc7ce0c6c6, type: 2}
@@ -4411,6 +4701,10 @@ Prefab:
       propertyPath: m_Name
       value: GreenPlatform (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1624518365854464, guid: 7117979fe08943945b7d8fa2b521853d, type: 2}
+      propertyPath: m_TagString
+      value: Green
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7117979fe08943945b7d8fa2b521853d, type: 2}
   m_IsPrefabParent: 0
@@ -4461,6 +4755,10 @@ Prefab:
     - target: {fileID: 1041139513736036, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
       propertyPath: m_Name
       value: RedSpikes (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041139513736036, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
+      propertyPath: m_TagString
+      value: RedKillsPlayer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
@@ -4521,6 +4819,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1937968179715564, guid: fde720a7b05717844949e4c257610fff, type: 2}
+      propertyPath: m_TagString
+      value: Red
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fde720a7b05717844949e4c257610fff, type: 2}
   m_IsPrefabParent: 0
@@ -4555,7 +4857,7 @@ Transform:
   m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2111667897
 Prefab:
@@ -4607,6 +4909,10 @@ Prefab:
     - target: {fileID: 4534833094391768, guid: 7117979fe08943945b7d8fa2b521853d, type: 2}
       propertyPath: m_LocalScale.y
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624518365854464, guid: 7117979fe08943945b7d8fa2b521853d, type: 2}
+      propertyPath: m_TagString
+      value: Green
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7117979fe08943945b7d8fa2b521853d, type: 2}
@@ -4667,6 +4973,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1937968179715564, guid: fde720a7b05717844949e4c257610fff, type: 2}
+      propertyPath: m_TagString
+      value: Red
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fde720a7b05717844949e4c257610fff, type: 2}
   m_IsPrefabParent: 0
@@ -4717,6 +5027,10 @@ Prefab:
     - target: {fileID: 1041139513736036, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
       propertyPath: m_Name
       value: RedSpikes (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041139513736036, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
+      propertyPath: m_TagString
+      value: RedKillsPlayer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e7c12245a7a32c40a868e6db3928856, type: 2}
