@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212352657074364300}
   - component: {fileID: 61754052578922388}
   - component: {fileID: 114256559788103216}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Moving_Green
   m_TagString: Green
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 7168
   horizontalRayCount: 0
   verticalRayCount: 0
   horizontalRaySpacing: 0
@@ -88,7 +88,7 @@ MonoBehaviour:
   coll: {fileID: 0}
   passengerMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 7168
   localWaypoints:
   - {x: 0, y: 0, z: 0}
   - {x: 5, y: 0, z: 0}

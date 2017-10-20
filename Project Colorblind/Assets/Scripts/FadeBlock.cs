@@ -30,6 +30,16 @@ public class FadeBlock : MonoBehaviour
         m_maxColor = m_sprite.color;
     }
 
+    private void OnEnable()
+    {
+        EventManager.Instance.OnFadeBlock += Activate;
+    }
+
+    private void OnDisable()
+    {
+        EventManager.Instance.OnFadeBlock -= Activate;
+    }
+
     private void LateUpdate()
     {
         // If not being touched, start reappearing if possible

@@ -55,8 +55,16 @@ public class Player : MonoBehaviour
 
         respawnPoint = transform.position;
         gameLevelManager = FindObjectOfType<LevelManager>();
+
+        EventManager.Instance.OnDeath += Die;
     }
-	public bool OnPad{
+
+    private void OnDestroy()
+    {
+        EventManager.Instance.OnDeath -= Die;
+    }
+
+    public bool OnPad{
 		get{ return onPad; }
 		set{ onPad = value; }
 

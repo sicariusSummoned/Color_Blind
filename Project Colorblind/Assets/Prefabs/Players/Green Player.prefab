@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4406272683355214}
   - component: {fileID: 212314020671730406}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Outline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 114792351875957678}
   - component: {fileID: 114700701164037446}
   - component: {fileID: 114158000446351030}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: Green Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionMask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 5376
   horizontalRayCount: 0
   verticalRayCount: 0
   horizontalRaySpacing: 0

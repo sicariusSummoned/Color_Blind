@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4446852925076834}
   - component: {fileID: 114651460323743818}
+  - component: {fileID: 114915388219033386}
   m_Layer: 0
   m_Name: ColorManager
   m_TagString: Untagged
@@ -49,5 +50,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7758c5db2de21a34c84cb18b12291e34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114915388219033386
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1448051525955652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0feb9002ff45e974e8472c90b2cc8a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

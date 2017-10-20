@@ -25,11 +25,11 @@ TagManager:
   - UI
   - 
   - 
-  - Player
   - Obstacle
   - Volumes
-  - 
-  - 
+  - RedPlayer
+  - GreenPlayer
+  - BluePlayer
   - 
   - 
   - 

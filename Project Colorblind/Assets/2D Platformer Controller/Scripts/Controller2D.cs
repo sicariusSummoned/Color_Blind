@@ -78,7 +78,7 @@ public class Controller2D : RaycastController
                     hit.collider.tag == "GreenKillsPlayer" ||
                     hit.collider.tag == "BlueKillsPlayer")
                 {
-                    gameObject.GetComponent<Player>().Die();
+                    EventManager.Instance.PlayerDeath();
                     return;
                 }
 
@@ -170,7 +170,6 @@ public class Controller2D : RaycastController
 
     private void VerticalCollisions(ref Vector2 moveAmount)
     {
-        this.gameObject.GetComponent<PlayerColor>().OnSeeSaw = false;
         float directionY = Mathf.Sign(moveAmount.y);
         float rayLength = Mathf.Abs(moveAmount.y) + skinWidth;
 
@@ -185,26 +184,21 @@ public class Controller2D : RaycastController
             if (hit)
             {
                 if (hit.collider.tag == "SeeSaw")
-                {
-                    this.gameObject.GetComponent<PlayerColor>().OnSeeSaw = true;
-                }
+                    EventManager.Instance.SeeSawActive();
+
                 else if(hit.collider.tag != "SeeSaw")
-                {
-                    this.gameObject.GetComponent<PlayerColor>().OnSeeSaw = false;
-                    
-                }
+                    EventManager.Instance.SeeSawInactive();
 
                 if (hit.collider.tag == "RedKillsPlayer" ||
                     hit.collider.tag == "GreenKillsPlayer" ||
                     hit.collider.tag == "BlueKillsPlayer")
                 {
-                    gameObject.GetComponent<Player>().Die();
+                    EventManager.Instance.PlayerDeath();
                     return;
                 }
+
                 else if (hit.collider.tag == "FadeBlock")
-                {
-                    hit.collider.gameObject.GetComponent<FadeBlock>().Activate();
-                }
+                    EventManager.Instance.FadeBlockActive();
 
                 if (hit.collider.tag == "Through")
                 {
