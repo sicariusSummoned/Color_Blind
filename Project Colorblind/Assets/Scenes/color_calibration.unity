@@ -416,7 +416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3734d704d4bb7b40b960a18b3b6d753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_firstLevel: James_1
+  m_firstLevel: 1_1
   m_cubeRenderer: {fileID: 1166585360}
   m_materials:
   - {fileID: 2100000, guid: b1abb149382a972419868311e480809c, type: 2}
