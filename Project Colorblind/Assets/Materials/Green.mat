@@ -78,7 +78,11 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
+<<<<<<< HEAD
     - _Color: {r: 0.5, g: 1, b: 0.1, a: 0.2}
+=======
+    - _Color: {r: 0.5, g: 1, b: 0.1, a: -0.009999948}
+>>>>>>> c04105a5eecf2a0640e4fa404132991e3e03a1ec
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
