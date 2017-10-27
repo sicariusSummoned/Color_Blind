@@ -14,7 +14,7 @@ public class ColorManager : MonoBehaviour
 
     private Color m_defaultRed =   new Color(1,    0, 0,    0.3f);
     private Color m_defaultGreen = new Color(0.5f, 1, 0.1f, 0.2f);
-    private Color m_defaultBlue =  new Color(0.1f, 0, 0.5f, 0.3f);
+    private Color m_defaultBlue =  new Color(0.1f, 0, 0.5f, 0.6f);
 
     private Color m_masterRed;
     private Color m_masterGreen;
