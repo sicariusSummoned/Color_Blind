@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114000014168620116}
   - component: {fileID: 114000011541027870}
   - component: {fileID: 114000014069254338}
+  - component: {fileID: 114768461627613458}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -120,6 +121,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 958b16cec60dadd4d885006f5acaa8d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_horizontal: 
+  m_vertical: 
+  m_jump: 
 --- !u!114 &114000014069254338
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -137,6 +141,8 @@ MonoBehaviour:
   wallJumpClimb: {x: 7.5, y: 16}
   wallJumpOff: {x: 8.5, y: 7}
   wallLeap: {x: 18, y: 17}
+  respawnPoint: {x: 0, y: 0, z: 0}
+  gameLevelManager: {fileID: 0}
   canDoubleJump: 1
   wallSlideSpeedMax: 3
   wallStickTime: 0.25
@@ -161,3 +167,15 @@ MonoBehaviour:
   coll: {fileID: 0}
   fallingThroughPlatformResetTimer: 0.1
   playerInput: {x: 0, y: 0}
+--- !u!114 &114768461627613458
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012305196534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de235ef2c64153443823bea16615d723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rgbSwitch: 0

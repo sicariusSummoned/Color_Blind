@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 124016528478848938}
   - component: {fileID: 81583919463924450}
   - component: {fileID: 114252609633090414}
-  - component: {fileID: 114267990729850432}
+  - component: {fileID: 114135250655830042}
   m_Layer: 0
   m_Name: FollowCamera
   m_TagString: MainCamera
@@ -95,6 +95,22 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1350870079511730}
   m_Enabled: 1
+--- !u!114 &114135250655830042
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1350870079511730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bef8490bffc86d4dafca1594865761b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  distance: 0
+  height: 0.5
+  heightDamping: 0.5
+  positionDamping: 0.5
 --- !u!114 &114252609633090414
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -162,23 +178,6 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
---- !u!114 &114267990729850432
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1350870079511730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fce164d9dc0554478c903685901260d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  verticalOffset: 0.5
-  lookAheadDstX: 0
-  lookSmoothTimeX: 0.4
-  verticalSmoothTime: 0.4
-  focusAreaSize: {x: 3, y: 5}
 --- !u!124 &124016528478848938
 Behaviour:
   m_ObjectHideFlags: 1

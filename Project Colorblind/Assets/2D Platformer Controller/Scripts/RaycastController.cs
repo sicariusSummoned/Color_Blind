@@ -3,26 +3,23 @@
 [RequireComponent(typeof(BoxCollider2D))]
 public class RaycastController : MonoBehaviour
 {
+    #region RaycastController Members
     public LayerMask collisionMask;
 
     public const float skinWidth = .015f;
     private const float dstBetweenRays = .25f;
 
-    [HideInInspector]
-    public int horizontalRayCount;
-    [HideInInspector]
-    public int verticalRayCount;
+    [HideInInspector] public int horizontalRayCount;
+    [HideInInspector] public int verticalRayCount;
 
-    [HideInInspector]
-    public float horizontalRaySpacing;
-    [HideInInspector]
-    public float verticalRaySpacing;
+    [HideInInspector] public float horizontalRaySpacing;
+    [HideInInspector] public float verticalRaySpacing;
 
-    [HideInInspector]
-    public BoxCollider2D coll;
-    [HideInInspector]
-    public RaycastOrigins raycastOrigins;
+    [HideInInspector] public BoxCollider2D coll;
+    [HideInInspector] public RaycastOrigins raycastOrigins;
+    #endregion
 
+    #region RaycastController Methods
     public virtual void Awake()
     {
         coll = GetComponent<BoxCollider2D>();
@@ -65,4 +62,5 @@ public class RaycastController : MonoBehaviour
         public Vector2 topLeft, topRight;
         public Vector2 bottomLeft, bottomRight;
     }
+    #endregion
 }

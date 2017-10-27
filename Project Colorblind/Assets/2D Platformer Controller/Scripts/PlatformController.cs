@@ -92,6 +92,9 @@ public class PlatformController : RaycastController
     {
         foreach (PassengerMovement passenger in passengerMovement)
         {
+            if (passengerMovement.Count > 1)
+                Debug.Log("Oh my!");
+
             if (!passengerDictionary.ContainsKey(passenger.transform))
             {
                 passengerDictionary.Add(passenger.transform, passenger.transform.GetComponent<Controller2D>());

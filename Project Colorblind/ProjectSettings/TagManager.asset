@@ -9,6 +9,13 @@ TagManager:
   - Checkpoint
   - FallDetector
   - SeeSaw
+  - FadeBlock
+  - Red
+  - Green
+  - Blue
+  - RedKillsPlayer
+  - GreenKillsPlayer
+  - BlueKillsPlayer
   layers:
   - Default
   - TransparentFX
@@ -18,11 +25,11 @@ TagManager:
   - UI
   - 
   - 
-  - Player
   - Obstacle
   - Volumes
-  - 
-  - 
+  - RedPlayer
+  - GreenPlayer
+  - BluePlayer
   - 
   - 
   - 
