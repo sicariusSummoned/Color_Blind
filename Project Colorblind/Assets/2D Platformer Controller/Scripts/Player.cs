@@ -97,6 +97,11 @@ public class Player : MonoBehaviour
         directionalInput = input;
     }
 
+    public Vector2 GetDirectionalInput()
+    {
+        return directionalInput;
+    }
+
 	public void JumpPad(){
 		velocity.y = jumpPadHeight;
 	}
