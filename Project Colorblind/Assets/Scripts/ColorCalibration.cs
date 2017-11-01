@@ -29,7 +29,7 @@ public class ColorCalibration : MonoBehaviour
         m_sprite.color = m_colors[0];
         m_text.text = "\nGreen Player and Blue Player should not be able to see this." +
                       "\nRed player should be able to see this." +
-                      "\nPress left and right arrow to update opacity.";
+                      "\nPress left and right arrow to update opacity. Press enter to confirm";
     }
 
     void Update()
