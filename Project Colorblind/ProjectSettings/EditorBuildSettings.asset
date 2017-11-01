@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: 
+    path: Assets/2D Platformer Controller/Scenes/Demo.unity
     guid: 179199da6dc864e4cb49e95a559d3396
   - enabled: 0
     path: 
@@ -45,5 +45,5 @@ EditorBuildSettings:
     path: Assets/Scenes/1_6.unity
     guid: 9bef15f574295374aafb6b117c2d4dfa
   - enabled: 0
-    path: Assets/Scenes/levelSkip_scene.unity
+    path: 
     guid: fd25f74eb8bf7074eb7d626be9801fae
