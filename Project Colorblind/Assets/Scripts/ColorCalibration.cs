@@ -1,18 +1,19 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 /// <summary>
 /// Author: Dante Nardo
-/// Last Modified: 10/15/2017
-/// Purpose: Calibrates the correct value for each material used in-game.
+/// Last Modified: 10/31/2017
+/// Purpose: Calibrates the correct value for each color used in-game.
 /// </summary>
 public class ColorCalibration : MonoBehaviour
 {
     #region ColorCalibration Members
     public string m_firstLevel;
-    public Renderer m_cubeRenderer;
-    public Material[] m_materials;
-    private Material m_current;
+    public SpriteRenderer m_sprite;
+    public Color[] m_colors;
+    public Text m_text;
     private Color m_temp;
     private int m_index;
     #endregion
@@ -21,11 +22,14 @@ public class ColorCalibration : MonoBehaviour
     void Start()
     {
         m_index = 0;
-        m_current = m_materials[0];
 
-        m_materials[0].color = ColorManager.Instance.MasterRed;
-        m_materials[1].color = ColorManager.Instance.MasterGreen;
-        m_materials[2].color = ColorManager.Instance.MasterBlue;
+        m_colors[0] = ColorManager.Instance.MasterRed;
+        m_colors[1] = ColorManager.Instance.MasterGreen;
+        m_colors[2] = ColorManager.Instance.MasterBlue;
+        m_sprite.color = m_colors[0];
+        m_text.text = "\nGreen Player and Blue Player should not be able to see this." +
+                      "\nRed player should be able to see this." +
+                      "\nPress left and right arrow to update opacity.";
     }
 
     void Update()
@@ -39,16 +43,16 @@ public class ColorCalibration : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            m_temp = m_current.color;
+            m_temp = m_sprite.color;
             m_temp.a -= 0.005f;
-            m_current.color = m_temp;
+            m_sprite.color = m_temp;
             return;
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            m_temp = m_current.color;
+            m_temp = m_sprite.color;
             m_temp.a += 0.005f;
-            m_current.color = m_temp;
+            m_sprite.color = m_temp;
             return;
         }
     }
@@ -64,26 +68,26 @@ public class ColorCalibration : MonoBehaviour
         switch (m_index)
         {
             case 0:
-                ColorManager.Instance.UpdateMasterRed(m_current.color);
+                ColorManager.Instance.UpdateMasterRed(m_sprite.color);
+                m_text.text = "\nRed Player and Blue Player should not be able to see this." +
+                              "\nGreen player should be able to see this." +
+                              "\nPress left and right arrow to update opacity.";
+                m_sprite.color = ColorManager.Instance.MasterGreen;
                 break;
             case 1:
-                ColorManager.Instance.UpdateMasterGreen(m_current.color);
+                ColorManager.Instance.UpdateMasterGreen(m_sprite.color);
+                m_text.text = "\nRed Player and Green Player should not be able to see this. " +
+                              "\nBlue player should be able to see this." +
+                              "\nPress left and right arrow to update opacity.";
+                m_sprite.color = ColorManager.Instance.MasterBlue;
                 break;
             case 2:
-                ColorManager.Instance.UpdateMasterBlue(m_current.color);
-                break;
-            default:
+                ColorManager.Instance.UpdateMasterBlue(m_sprite.color);
                 ColorManager.Instance.EndCalibration();
                 SceneManager.LoadScene(m_firstLevel);
-                return;
+                break;
         }
-
         m_index++;
-        if (m_index >= m_materials.Length)
-            return;
-
-        m_current = m_materials[m_index];
-        m_cubeRenderer.material = m_current;
     }
     #endregion
 }
