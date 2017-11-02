@@ -6,7 +6,7 @@ public class PlatformController : RaycastController
     public LayerMask passengerMask;
 
     public Vector3[] localWaypoints;
-    private Vector3[] globalWaypoints;
+    protected Vector3[] globalWaypoints;
 
     public float speed;
     public bool cyclic;
@@ -14,12 +14,12 @@ public class PlatformController : RaycastController
     [Range(0, 2)]
     public float easeAmount;
 
-    private int fromWaypointIndex;
-    private float percentBetweenWaypoints;
-    private float nextMoveTime;
+    protected int fromWaypointIndex;
+    protected float percentBetweenWaypoints;
+    protected float nextMoveTime;
 
-    private List<PassengerMovement> passengerMovement;
-    private Dictionary<Transform, Controller2D> passengerDictionary = new Dictionary<Transform, Controller2D>();
+    protected List<PassengerMovement> passengerMovement;
+    protected Dictionary<Transform, Controller2D> passengerDictionary = new Dictionary<Transform, Controller2D>();
 
     public override void Start()
     {
@@ -32,7 +32,7 @@ public class PlatformController : RaycastController
         }
     }
 
-    private void Update()
+    protected void Update()
     {
         UpdateRaycastOrigins();
 
@@ -45,13 +45,13 @@ public class PlatformController : RaycastController
         MovePassengers(false);
     }
 
-    private float Ease(float x)
+    protected float Ease(float x)
     {
         float a = easeAmount + 1f;
         return Mathf.Pow(x, a) / (Mathf.Pow(x, a) + Mathf.Pow(1 - x, a));
     }
 
-    private Vector3 CalculatePlatformMovement()
+    protected Vector3 CalculatePlatformMovement()
     {
         if (Time.time < nextMoveTime)
         {
@@ -88,7 +88,7 @@ public class PlatformController : RaycastController
         return newPos - transform.position;
     }
 
-    private void MovePassengers(bool beforeMovePlatform)
+    protected void MovePassengers(bool beforeMovePlatform)
     {
         foreach (PassengerMovement passenger in passengerMovement)
         {
@@ -107,7 +107,7 @@ public class PlatformController : RaycastController
         }
     }
 
-    private void CalculatePassengerMovement(Vector3 velocity)
+    protected void CalculatePassengerMovement(Vector3 velocity)
     {
         HashSet<Transform> movedPassengers = new HashSet<Transform>();
         passengerMovement = new List<PassengerMovement>();
@@ -190,7 +190,7 @@ public class PlatformController : RaycastController
         }
     }
 
-    private struct PassengerMovement
+    protected struct PassengerMovement
     {
         public Transform transform;
         public Vector3 velocity;

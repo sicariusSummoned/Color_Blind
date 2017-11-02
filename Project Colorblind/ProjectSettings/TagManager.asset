@@ -16,6 +16,7 @@ TagManager:
   - RedKillsPlayer
   - GreenKillsPlayer
   - BlueKillsPlayer
+  - Button
   layers:
   - Default
   - TransparentFX

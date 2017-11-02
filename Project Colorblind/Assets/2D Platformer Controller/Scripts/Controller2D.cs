@@ -74,13 +74,7 @@ public class Controller2D : RaycastController
 
             if (hit)
             {
-                if (hit.collider.tag == "RedKillsPlayer" ||
-                    hit.collider.tag == "GreenKillsPlayer" ||
-                    hit.collider.tag == "BlueKillsPlayer")
-                {
-                    EventManager.Instance.PlayerDeath();
-                    return;
-                }
+                EventManager.Instance.ProcessCollision(hit, hit.collider.tag);
 
                 if (hit.distance == 0)
                 {
@@ -183,22 +177,7 @@ public class Controller2D : RaycastController
 
             if (hit)
             {
-                if (hit.collider.tag == "SeeSaw")
-                    EventManager.Instance.SeeSawActive();
-
-                else if(hit.collider.tag != "SeeSaw")
-                    EventManager.Instance.SeeSawInactive();
-
-                if (hit.collider.tag == "RedKillsPlayer" ||
-                    hit.collider.tag == "GreenKillsPlayer" ||
-                    hit.collider.tag == "BlueKillsPlayer")
-                {
-                    EventManager.Instance.PlayerDeath();
-                    return;
-                }
-
-                else if (hit.collider.tag == "FadeBlock")
-                    EventManager.Instance.FadeBlockActive();
+                EventManager.Instance.ProcessCollision(hit, hit.collider.tag);
 
                 if (hit.collider.tag == "Through")
                 {
