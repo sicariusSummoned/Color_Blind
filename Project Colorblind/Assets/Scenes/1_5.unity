@@ -159,6 +159,11 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 212352657074364300, guid: 3b4118e2480f8e54f8e30b83fbdbee3c,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b4118e2480f8e54f8e30b83fbdbee3c, type: 2}
   m_IsPrefabParent: 0
@@ -205,6 +210,11 @@ Prefab:
     - target: {fileID: 4620725855994088, guid: b20acba5e912eb745bd4be4be9ee58f1, type: 2}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 212008726514671588, guid: b20acba5e912eb745bd4be4be9ee58f1,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b20acba5e912eb745bd4be4be9ee58f1, type: 2}
@@ -270,6 +280,11 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 212352657074364300, guid: 3b4118e2480f8e54f8e30b83fbdbee3c,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b4118e2480f8e54f8e30b83fbdbee3c, type: 2}
   m_IsPrefabParent: 0
@@ -325,6 +340,11 @@ Prefab:
       propertyPath: m_Name
       value: Platform_Blue (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 212783168911667808, guid: 8c102f6455d01b94fa748cd4870c86d4,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8c102f6455d01b94fa748cd4870c86d4, type: 2}
   m_IsPrefabParent: 0
@@ -375,6 +395,11 @@ Prefab:
     - target: {fileID: 1756605026787990, guid: b20acba5e912eb745bd4be4be9ee58f1, type: 2}
       propertyPath: m_Name
       value: Spikes_Red (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212008726514671588, guid: b20acba5e912eb745bd4be4be9ee58f1,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b20acba5e912eb745bd4be4be9ee58f1, type: 2}
@@ -434,6 +459,11 @@ Prefab:
     - target: {fileID: 4829885584998692, guid: 3b4118e2480f8e54f8e30b83fbdbee3c, type: 2}
       propertyPath: m_LocalScale.y
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 212352657074364300, guid: 3b4118e2480f8e54f8e30b83fbdbee3c,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b4118e2480f8e54f8e30b83fbdbee3c, type: 2}
@@ -548,6 +578,11 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 212352657074364300, guid: 3b4118e2480f8e54f8e30b83fbdbee3c,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b4118e2480f8e54f8e30b83fbdbee3c, type: 2}
   m_IsPrefabParent: 0
@@ -598,6 +633,11 @@ Prefab:
     - target: {fileID: 1756605026787990, guid: b20acba5e912eb745bd4be4be9ee58f1, type: 2}
       propertyPath: m_Name
       value: Spikes_Red (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212008726514671588, guid: b20acba5e912eb745bd4be4be9ee58f1,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b20acba5e912eb745bd4be4be9ee58f1, type: 2}
@@ -718,6 +758,11 @@ Prefab:
     - target: {fileID: 4829885584998692, guid: 3b4118e2480f8e54f8e30b83fbdbee3c, type: 2}
       propertyPath: m_LocalScale.y
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 212352657074364300, guid: 3b4118e2480f8e54f8e30b83fbdbee3c,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b4118e2480f8e54f8e30b83fbdbee3c, type: 2}
@@ -881,6 +926,11 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 212352657074364300, guid: 3b4118e2480f8e54f8e30b83fbdbee3c,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b4118e2480f8e54f8e30b83fbdbee3c, type: 2}
   m_IsPrefabParent: 0
@@ -926,6 +976,11 @@ Prefab:
     - target: {fileID: 1756605026787990, guid: b20acba5e912eb745bd4be4be9ee58f1, type: 2}
       propertyPath: m_Name
       value: Spikes_Red (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212008726514671588, guid: b20acba5e912eb745bd4be4be9ee58f1,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b20acba5e912eb745bd4be4be9ee58f1, type: 2}
@@ -974,6 +1029,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1610384997204782, guid: 21fc59a02dba54a4e8bd709a18dfe8e2, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 21fc59a02dba54a4e8bd709a18dfe8e2, type: 2}
   m_IsPrefabParent: 0
@@ -1019,6 +1078,11 @@ Prefab:
     - target: {fileID: 1297575530520072, guid: ac50a3128cc2c084fb23373b371a8e3a, type: 2}
       propertyPath: m_Name
       value: Spikes_Blue (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212783168911667808, guid: ac50a3128cc2c084fb23373b371a8e3a,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac50a3128cc2c084fb23373b371a8e3a, type: 2}
@@ -1115,6 +1179,11 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 212352657074364300, guid: 3b4118e2480f8e54f8e30b83fbdbee3c,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b4118e2480f8e54f8e30b83fbdbee3c, type: 2}
   m_IsPrefabParent: 0
@@ -1174,6 +1243,11 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 212352657074364300, guid: 3b4118e2480f8e54f8e30b83fbdbee3c,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b4118e2480f8e54f8e30b83fbdbee3c, type: 2}
   m_IsPrefabParent: 0
@@ -1232,6 +1306,11 @@ Prefab:
     - target: {fileID: 4829885584998692, guid: 3b4118e2480f8e54f8e30b83fbdbee3c, type: 2}
       propertyPath: m_LocalScale.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 212352657074364300, guid: 3b4118e2480f8e54f8e30b83fbdbee3c,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b4118e2480f8e54f8e30b83fbdbee3c, type: 2}
@@ -1332,6 +1411,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212783168911667808, guid: ac50a3128cc2c084fb23373b371a8e3a,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac50a3128cc2c084fb23373b371a8e3a, type: 2}
   m_IsPrefabParent: 0
@@ -1381,6 +1465,11 @@ Prefab:
     - target: {fileID: 1756605026787990, guid: 6c738034e59bfdb45861249996625207, type: 2}
       propertyPath: m_Name
       value: Platform_Red (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212008726514671588, guid: 6c738034e59bfdb45861249996625207,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c738034e59bfdb45861249996625207, type: 2}
@@ -1441,6 +1530,11 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 212352657074364300, guid: 3b4118e2480f8e54f8e30b83fbdbee3c,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b4118e2480f8e54f8e30b83fbdbee3c, type: 2}
   m_IsPrefabParent: 0
@@ -1491,6 +1585,11 @@ Prefab:
     - target: {fileID: 1297575530520072, guid: ac50a3128cc2c084fb23373b371a8e3a, type: 2}
       propertyPath: m_Name
       value: Spikes_Blue (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212783168911667808, guid: ac50a3128cc2c084fb23373b371a8e3a,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac50a3128cc2c084fb23373b371a8e3a, type: 2}
@@ -1551,6 +1650,11 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 212352657074364300, guid: 3b4118e2480f8e54f8e30b83fbdbee3c,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b4118e2480f8e54f8e30b83fbdbee3c, type: 2}
   m_IsPrefabParent: 0
@@ -1609,6 +1713,11 @@ Prefab:
     - target: {fileID: 4829885584998692, guid: 3b4118e2480f8e54f8e30b83fbdbee3c, type: 2}
       propertyPath: m_LocalScale.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 212352657074364300, guid: 3b4118e2480f8e54f8e30b83fbdbee3c,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b4118e2480f8e54f8e30b83fbdbee3c, type: 2}
@@ -1700,6 +1809,11 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 212352657074364300, guid: 3b4118e2480f8e54f8e30b83fbdbee3c,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b4118e2480f8e54f8e30b83fbdbee3c, type: 2}
   m_IsPrefabParent: 0
@@ -1763,6 +1877,11 @@ Prefab:
     - target: {fileID: 4829885584998692, guid: 3b4118e2480f8e54f8e30b83fbdbee3c, type: 2}
       propertyPath: m_LocalScale.y
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 212352657074364300, guid: 3b4118e2480f8e54f8e30b83fbdbee3c,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b4118e2480f8e54f8e30b83fbdbee3c, type: 2}
@@ -1873,6 +1992,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1612174668353482, guid: a704c6a5065334a4cb606c6c17d9dafa, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a704c6a5065334a4cb606c6c17d9dafa, type: 2}
   m_IsPrefabParent: 0
@@ -1923,6 +2046,11 @@ Prefab:
     - target: {fileID: 1297575530520072, guid: ac50a3128cc2c084fb23373b371a8e3a, type: 2}
       propertyPath: m_Name
       value: Spikes_Blue (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212783168911667808, guid: ac50a3128cc2c084fb23373b371a8e3a,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac50a3128cc2c084fb23373b371a8e3a, type: 2}
@@ -2031,6 +2159,11 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 212352657074364300, guid: 3b4118e2480f8e54f8e30b83fbdbee3c,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b4118e2480f8e54f8e30b83fbdbee3c, type: 2}
   m_IsPrefabParent: 0
@@ -2088,6 +2221,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4829885584998692, guid: 3b4118e2480f8e54f8e30b83fbdbee3c, type: 2}
       propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212352657074364300, guid: 3b4118e2480f8e54f8e30b83fbdbee3c,
+        type: 2}
+      propertyPath: m_MaskInteraction
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2153,6 +2291,11 @@ Prefab:
     - target: {fileID: 4829885584998692, guid: 3b4118e2480f8e54f8e30b83fbdbee3c, type: 2}
       propertyPath: m_LocalScale.y
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 212352657074364300, guid: 3b4118e2480f8e54f8e30b83fbdbee3c,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b4118e2480f8e54f8e30b83fbdbee3c, type: 2}
@@ -2259,6 +2402,11 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 212352657074364300, guid: 3b4118e2480f8e54f8e30b83fbdbee3c,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b4118e2480f8e54f8e30b83fbdbee3c, type: 2}
   m_IsPrefabParent: 0
@@ -2346,6 +2494,11 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 212352657074364300, guid: 3b4118e2480f8e54f8e30b83fbdbee3c,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b4118e2480f8e54f8e30b83fbdbee3c, type: 2}
   m_IsPrefabParent: 0
@@ -2403,6 +2556,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4829885584998692, guid: 3b4118e2480f8e54f8e30b83fbdbee3c, type: 2}
       propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212352657074364300, guid: 3b4118e2480f8e54f8e30b83fbdbee3c,
+        type: 2}
+      propertyPath: m_MaskInteraction
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2463,6 +2621,11 @@ Prefab:
     - target: {fileID: 4829885584998692, guid: 3b4118e2480f8e54f8e30b83fbdbee3c, type: 2}
       propertyPath: m_LocalScale.y
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 212352657074364300, guid: 3b4118e2480f8e54f8e30b83fbdbee3c,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b4118e2480f8e54f8e30b83fbdbee3c, type: 2}
@@ -2553,6 +2716,11 @@ Prefab:
       propertyPath: m_Name
       value: Spikes_Blue (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 212783168911667808, guid: ac50a3128cc2c084fb23373b371a8e3a,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac50a3128cc2c084fb23373b371a8e3a, type: 2}
   m_IsPrefabParent: 0
@@ -2609,6 +2777,11 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 212008726514671588, guid: 6c738034e59bfdb45861249996625207,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c738034e59bfdb45861249996625207, type: 2}
   m_IsPrefabParent: 0
@@ -2654,6 +2827,11 @@ Prefab:
     - target: {fileID: 4829885584998692, guid: 3b4118e2480f8e54f8e30b83fbdbee3c, type: 2}
       propertyPath: m_LocalScale.x
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 212352657074364300, guid: 3b4118e2480f8e54f8e30b83fbdbee3c,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b4118e2480f8e54f8e30b83fbdbee3c, type: 2}
@@ -2701,6 +2879,11 @@ Prefab:
       propertyPath: m_Name
       value: Spikes_Blue (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 212783168911667808, guid: ac50a3128cc2c084fb23373b371a8e3a,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac50a3128cc2c084fb23373b371a8e3a, type: 2}
   m_IsPrefabParent: 0
@@ -2746,6 +2929,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4627545924058964, guid: 04ae6b49c3f1deb4f9ecc9ff93cd9340, type: 2}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494676798518540, guid: 04ae6b49c3f1deb4f9ecc9ff93cd9340, type: 2}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2806,6 +2993,11 @@ Prefab:
     - target: {fileID: 4829885584998692, guid: 3b4118e2480f8e54f8e30b83fbdbee3c, type: 2}
       propertyPath: m_LocalScale.y
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 212352657074364300, guid: 3b4118e2480f8e54f8e30b83fbdbee3c,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b4118e2480f8e54f8e30b83fbdbee3c, type: 2}
