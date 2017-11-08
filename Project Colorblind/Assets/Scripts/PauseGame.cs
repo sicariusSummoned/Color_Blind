@@ -21,20 +21,29 @@ public class PauseGame : MonoBehaviour {
 	}
 
 
-	public void Pause(){
+    public void Pause()
+    {
+        Debug.Log("PAUSE HAS BEEN USED");
 
-		if (Input.GetKeyDown (KeyCode.Escape)) {
-			if (canvas.gameObject.activeInHierarchy == false) {
-				canvas.gameObject.SetActive (true);
-				Time.timeScale = 0;
+            if (canvas.gameObject.activeInHierarchy == false)
+            {
+                canvas.gameObject.SetActive(true);
+                Time.timeScale = 0;
 
+                Debug.Log("Here");
+            }
+            else
+            {
+                Debug.Log("There");
+                Time.timeScale = 1;
+                canvas.gameObject.SetActive(false);
+                
+            }      
+    }
 
-
-			} else {
-				canvas.gameObject.SetActive (false);
-				Time.timeScale = 1;
-			}
-
-	}
+    public void DoTheThing()
+    {
+        Debug.Log("Helloooooooooooooooooooo");
+    }
 			
 }
