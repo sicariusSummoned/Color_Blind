@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212783168911667808}
   - component: {fileID: 61680672072915612}
   m_Layer: 8
-  m_Name: Spikes_Blue
+  m_Name: Spikes_White
   m_TagString: BlueKillsPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
