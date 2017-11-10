@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114456110989864132}
   - component: {fileID: 114241668306552014}
   - component: {fileID: 212721095854495826}
+  - component: {fileID: 114416003380026656}
   m_Layer: 0
   m_Name: Blue Player - Ghost
   m_TagString: Untagged
@@ -144,6 +145,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_horizontal: P3_Horizontal
   m_vertical: P3_Vertical
+--- !u!114 &114416003380026656
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1330331919158922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb38ab8452640d340bd7e0826e5913b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wonLevel: 0
+  winDelay: 1
 --- !u!114 &114456110989864132
 MonoBehaviour:
   m_ObjectHideFlags: 1

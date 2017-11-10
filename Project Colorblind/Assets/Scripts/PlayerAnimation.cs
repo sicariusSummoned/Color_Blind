@@ -4,37 +4,100 @@ using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour {
 
-    private float velocity;
     private Player player;
+
+    private float velocity;
     private Animator fillControl;
     private Animator outControl;
     private float lastlastVelocity;
 
+    private bool justWonLevel = false;
+    public bool wonLevel = false;
+    private bool nextLevel = false;
+    public float moveDelay = 2.0f;
+    private float currentWinTime;
+    private Vector3 doorPos;
+    private Vector3 prevPos;
+    public float rotDelay = 1.0f;
+    private float rotTimer;
+
+    public bool NextLevel
+    {
+        get { return nextLevel; }
+    }
+
     // Use this for initialization
     void Start () {
-        player = gameObject.GetComponent<Player>();
-        fillControl = transform.Find("Fill").GetComponent<Animator>();
-        outControl = transform.Find("Outline").GetComponent<Animator>();
-        Debug.Log(fillControl);
-        Debug.Log(outControl);
+
+        if(gameObject.tag == "Player")
+        {
+            player = gameObject.GetComponent<Player>();
+            fillControl = transform.Find("Fill").GetComponent<Animator>();
+            outControl = transform.Find("Outline").GetComponent<Animator>();
+        }
     }
 	
 	// Update is called once per frame
 	void Update () {
-        velocity = player.GetDirectionalInput().x;
-
-        if(gameObject.name == "Red Player")
-            Debug.Log(velocity);
-
-        if (velocity != 0)
+        if (gameObject.tag == "Player")
         {
-            fillControl.SetBool("Moving", true);
-            outControl.SetBool("Moving", true);
+            velocity = player.GetDirectionalInput().x;
+            if (velocity != 0)
+            {
+                fillControl.SetBool("Moving", true);
+                outControl.SetBool("Moving", true);
+            }
+            else if (velocity == 0)
+            {
+                fillControl.SetBool("Moving", false);
+                outControl.SetBool("Moving", false);
+            }
         }
-        else if (velocity == 0)
+
+        if(wonLevel)
         {
-            fillControl.SetBool("Moving", false);
-            outControl.SetBool("Moving", false);
+            LevelWin();
         }
 	}
+
+    void LevelWin()
+    {
+        if (!justWonLevel)
+        {
+            justWonLevel = true;
+            doorPos = GameObject.Find("LevelManager").transform.position;
+            prevPos = transform.position;
+            if(gameObject.tag == "Player")
+            {
+                GetComponent<PlayerInput>().enabled = false;
+                GetComponent<Player>().enabled = false;
+                GetComponent<Controller2D>().enabled = false;
+            }
+            else
+            {
+                GetComponent<GhostPlayerInput>().enabled = false;
+                GetComponent<GhostPlayer>().enabled = false;
+            }
+        }
+        
+        currentWinTime += Time.deltaTime;
+
+        if(currentWinTime >= moveDelay)
+        {
+            transform.Rotate(new Vector3(0, 0, 1), currentWinTime * 5);
+            transform.localScale.Scale(new Vector3(currentWinTime * .5f, currentWinTime * .5f, currentWinTime * .5f));
+        }
+
+        if (currentWinTime >= moveDelay + rotDelay)
+        {
+            Debug.Log("next");
+            nextLevel = true;
+        }
+
+        float currentMove = currentWinTime / moveDelay;
+
+        //Debug.Log(Vector3.Lerp(prevPos, doorPos, currentMove));
+
+        transform.position = Vector3.Lerp(prevPos, doorPos, currentMove);
+    }
 }

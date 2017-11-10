@@ -25,9 +25,9 @@ public class SmoothFollow : MonoBehaviour {
 
         //currentHeight = Mathf.Lerp(currentHeight, wantedHeight, heightDamping * Time.deltaTime);
         Vector3 temp = new Vector3(target.position.x, target.position.y, -10);
-        Debug.Log("Pre z is:" + transform.position.z);
+        //Debug.Log("Pre z is:" + transform.position.z);
         transform.position = Vector3.Lerp(transform.position, temp, Time.deltaTime * positionDamping);
-        Debug.Log("Post z is:" + transform.position.z);
+        //Debug.Log("Post z is:" + transform.position.z);
         transform.position.Set(transform.position.x, transform.position.y, -10);
 
         
