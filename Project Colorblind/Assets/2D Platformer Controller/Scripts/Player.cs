@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
     public float maxJumpHeight = 4f;
     public float minJumpHeight = 1f;
     public float timeToJumpApex = .4f;
-    private float accelerationTimeAirborne = .2f;
+    private float accelerationTimeAirborne = .1f;
     private float accelerationTimeGrounded = .1f;
     private float moveSpeed = 6f;
 
@@ -182,8 +182,8 @@ public class Player : MonoBehaviour
 
     private void CalculateVelocity()
     {
-        float targetVelocityX = directionalInput.x * moveSpeed;
-        velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, (controller.collisions.below ? accelerationTimeGrounded : accelerationTimeAirborne));
+        //velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, (controller.collisions.below ? accelerationTimeGrounded : accelerationTimeAirborne));
+        velocity.x = directionalInput.x * moveSpeed;
         velocity.y += gravity * Time.deltaTime;
     }
 
