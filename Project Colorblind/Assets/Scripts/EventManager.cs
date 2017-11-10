@@ -44,7 +44,8 @@ public class EventManager : MonoBehaviour
     {
         if (tag == "RedKillsPlayer" ||
             tag == "GreenKillsPlayer" ||
-            tag == "BlueKillsPlayer")
+            tag == "BlueKillsPlayer" ||
+            tag == "WhiteKillsPlayer")
         {
             Instance.PlayerDeath();
             return;
