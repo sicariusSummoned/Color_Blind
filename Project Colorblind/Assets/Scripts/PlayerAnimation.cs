@@ -90,13 +90,10 @@ public class PlayerAnimation : MonoBehaviour {
 
         if (currentWinTime >= moveDelay + rotDelay)
         {
-            Debug.Log("next");
             nextLevel = true;
         }
 
         float currentMove = currentWinTime / moveDelay;
-
-        //Debug.Log(Vector3.Lerp(prevPos, doorPos, currentMove));
 
         transform.position = Vector3.Lerp(prevPos, doorPos, currentMove);
     }

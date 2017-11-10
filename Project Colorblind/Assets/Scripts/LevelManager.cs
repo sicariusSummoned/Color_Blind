@@ -55,7 +55,7 @@ public class LevelManager : MonoBehaviour
 
             if (playerAnims[0].NextLevel)
             {
-                //SceneManager.LoadScene(m_nextLevel);
+                SceneManager.LoadScene(m_nextLevel);
             }
         }
     }
