@@ -5,9 +5,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour {
-    public Canvas warningMenu;
-    public Canvas mainMenu;
-    public Canvas selectMenu;
+    public GameObject warningMenu;
+    public GameObject mainMenu;
+    public GameObject selectMenu;
 
 	// Use this for initialization
 	void Start () {
@@ -52,18 +52,7 @@ public class MenuScript : MonoBehaviour {
     {
         SceneManager.LoadScene("1_6", LoadSceneMode.Single);
     }
-    public void level7()
-    {
-        SceneManager.LoadScene("1_7", LoadSceneMode.Single);
-    }
-    public void level8()
-    {
-        SceneManager.LoadScene("1_8", LoadSceneMode.Single);
-    }
-    public void level9()
-    {
-        SceneManager.LoadScene("1_9", LoadSceneMode.Single);
-    }
+ 
     public void quitting()
     {
         Application.Quit();
