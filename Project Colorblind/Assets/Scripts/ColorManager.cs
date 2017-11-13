@@ -19,6 +19,7 @@ public class ColorManager : MonoBehaviour
     private Color m_masterRed;
     private Color m_masterGreen;
     private Color m_masterBlue;
+    private const float Increment = 0.01f;
 
     public Color MasterRed
     {
@@ -188,6 +189,56 @@ public class ColorManager : MonoBehaviour
         PlayerPrefs.SetFloat("ba", m_masterBlue.a);
 
         PlayerPrefs.Save();
+    }
+
+    public void ReapplyColors()
+    {
+        EndCalibration();
+
+        foreach (var red in m_redSprites)
+            red.color = m_masterRed;
+
+        foreach (var green in m_greenSprites)
+            green.color = m_masterGreen;
+
+        foreach (var blue in m_blueSprites)
+            blue.color = m_masterBlue;
+    }
+
+    public void IncrementRed()
+    {
+        m_masterRed.a += Increment;
+        ReapplyColors();
+    }
+
+    public void DecrementRed()
+    {
+        m_masterRed.a -= Increment;
+        ReapplyColors();
+    }
+
+    public void IncrementGreen()
+    {
+        m_masterGreen.a += Increment;
+        ReapplyColors();
+    }
+
+    public void DecrementGreen()
+    {
+        m_masterGreen.a -= Increment;
+        ReapplyColors();
+    }
+
+    public void IncrementBlue()
+    {
+        m_masterBlue.a += Increment;
+        ReapplyColors();
+    }
+
+    public void DecrementBlue()
+    {
+        m_masterBlue.a -= Increment;
+        ReapplyColors();
     }
     #endregion
 }
