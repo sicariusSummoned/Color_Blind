@@ -8,6 +8,7 @@ public class MenuScript : MonoBehaviour {
     public GameObject warningMenu;
     public GameObject mainMenu;
     public GameObject selectMenu;
+    public GameObject creditMenu;
 
 	// Use this for initialization
 	void Start () {
@@ -25,6 +26,7 @@ public class MenuScript : MonoBehaviour {
         mainMenu.gameObject.SetActive(true);
         warningMenu.gameObject.SetActive(false);
         selectMenu.gameObject.SetActive(false);
+        creditMenu.gameObject.SetActive(false);
     }
 
     public void play()
@@ -63,5 +65,15 @@ public class MenuScript : MonoBehaviour {
         warningMenu.gameObject.SetActive(false);
         mainMenu.gameObject.SetActive(false);
         selectMenu.gameObject.SetActive(true);
+        creditMenu.gameObject.SetActive(false);
     }
+
+    public void toCredits()
+    {
+        warningMenu.gameObject.SetActive(false);
+        mainMenu.gameObject.SetActive(false);
+        selectMenu.gameObject.SetActive(false);
+        creditMenu.gameObject.SetActive(true);
+    }
+
 }
