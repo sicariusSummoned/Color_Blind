@@ -148,7 +148,7 @@ Transform:
   m_GameObject: {fileID: 1317004381989038}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 2.21, y: 2.21, z: 1}
   m_Children: []
   m_Father: {fileID: 4885968676995178}
   m_RootOrder: 1
@@ -275,6 +275,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb38ab8452640d340bd7e0826e5913b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wonLevel: 0
+  moveDelay: 2
+  rotDelay: 1
 --- !u!114 &114700701164037446
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -850,7 +853,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 3.8
+      value: 5.5
       mode: 0
       spread: 0
       speed:
