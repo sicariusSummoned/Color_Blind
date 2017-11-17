@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PauseGame : MonoBehaviour {
 	public Transform canvas;
@@ -41,10 +42,14 @@ public class PauseGame : MonoBehaviour {
                 
             }      
     }
+		
+	public void returnMain(){
+		SceneManager.LoadScene ("main_menu", LoadSceneMode.Single);
+	}
+		
+	public void quitting()
+	{
+		Application.Quit();
+	}
 
-    public void DoTheThing()
-    {
-        Debug.Log("Helloooooooooooooooooooo");
-    }
-			
 }
