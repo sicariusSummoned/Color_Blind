@@ -2525,7 +2525,7 @@ Prefab:
     - target: {fileID: 114993369661074724, guid: 6ad859d63d8b8d74b83cef871def029c,
         type: 2}
       propertyPath: m_nextLevel
-      value: color_calibration
+      value: 2_5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6ad859d63d8b8d74b83cef871def029c, type: 2}
