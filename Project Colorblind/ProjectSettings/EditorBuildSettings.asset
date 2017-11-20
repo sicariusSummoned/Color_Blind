@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/2D Platformer Controller/Scenes/Demo.unity
+    path: 
     guid: 179199da6dc864e4cb49e95a559d3396
   - enabled: 0
-    path: Assets/__DELETED_GUID_Trash/dd21c9da6616c8149b77afcdad6c4b39
+    path: 
     guid: dd21c9da6616c8149b77afcdad6c4b39
   - enabled: 0
-    path: Assets/__DELETED_GUID_Trash/d18dae7620c7a3f4b9483cab525a2b87
+    path: 
     guid: d18dae7620c7a3f4b9483cab525a2b87
   - enabled: 1
     path: Assets/Scenes/color_calibration.unity
@@ -47,3 +47,6 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: fd25f74eb8bf7074eb7d626be9801fae
+  - enabled: 1
+    path: Assets/Scenes/LoadLevel.unity
+    guid: 1a3bd924a8243b342afa53eed427ba68
