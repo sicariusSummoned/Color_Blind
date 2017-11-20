@@ -7,6 +7,7 @@ public class LoadLevel : MonoBehaviour {
 
 	public GameObject loadingScreen; 
 	public Slider slider; 
+	public Text progressText;
 
 	//used for loading in levels. Name is the name of the level
 	public void LoadInLevel(string levelName){
@@ -19,6 +20,7 @@ public class LoadLevel : MonoBehaviour {
 		while (op.isDone == false) {
 			float progress = Mathf.Clamp01 (op.progress / .9f);
 			slider.value = progress;
+			progressText.text = progress * 100f + "%";
 
 			yield return null;
 
