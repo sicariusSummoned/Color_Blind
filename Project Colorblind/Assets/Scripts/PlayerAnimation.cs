@@ -8,7 +8,7 @@ public class PlayerAnimation : MonoBehaviour {
 
     private float velocity;
     private Animator fillControl;
-    private Animator outControl;
+    private Animator Control;
     private float lastlastVelocity;
 
     private bool justWonLevel = false;
@@ -32,8 +32,7 @@ public class PlayerAnimation : MonoBehaviour {
         if(gameObject.tag == "Player")
         {
             player = gameObject.GetComponent<Player>();
-            fillControl = transform.Find("Fill").GetComponent<Animator>();
-            outControl = transform.Find("Outline").GetComponent<Animator>();
+            Control = transform.Find("Graphics").GetComponent<Animator>();
         }
     }
 	
@@ -44,13 +43,11 @@ public class PlayerAnimation : MonoBehaviour {
             velocity = player.GetDirectionalInput().x;
             if (velocity != 0)
             {
-                fillControl.SetBool("Moving", true);
-                outControl.SetBool("Moving", true);
+                Control.SetBool("Moving", true);
             }
             else if (velocity == 0)
             {
-                fillControl.SetBool("Moving", false);
-                outControl.SetBool("Moving", false);
+                Control.SetBool("Moving", false);
             }
         }
 
