@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
     private float velocityXSmoothing;
 
 
-
+    public SpriteRenderer spriteRenderer;
     private Controller2D controller;
 
     private Vector2 directionalInput;
@@ -48,6 +48,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
 		onPad = false;
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         controller = GetComponent<Controller2D>();
         gravity = -(2 * maxJumpHeight) / Mathf.Pow(timeToJumpApex, 2);
         maxJumpVelocity = Mathf.Abs(gravity) * timeToJumpApex;
@@ -182,9 +183,21 @@ public class Player : MonoBehaviour
 
     private void CalculateVelocity()
     {
-        //velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, (controller.collisions.below ? accelerationTimeGrounded : accelerationTimeAirborne));
         velocity.x = directionalInput.x * moveSpeed;
         velocity.y += gravity * Time.deltaTime;
+
+        if (velocity.x > 0 && transform.localScale.x < 0)
+        {
+            Vector3 scale = transform.localScale;
+            scale.x *= -1;
+            transform.localScale = scale;
+        }
+        else if (velocity.x < 0 && transform.localScale.x > 0)
+        {
+            Vector3 scale = transform.localScale;
+            scale.x *= -1;
+            transform.localScale = scale;
+        }
     }
 
     public void Die()
