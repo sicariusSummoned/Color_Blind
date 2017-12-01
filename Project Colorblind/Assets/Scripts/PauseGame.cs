@@ -41,14 +41,17 @@ public class PauseGame : MonoBehaviour
         pauseCanvas.SetActive(true);
     }
 
-    public void ReturnMain()
-    {
-        SceneManager.LoadScene("main_menu", LoadSceneMode.Single);
-    }
-
     public void Quitting()
     {
+        Debug.Log("Quitting");
         Application.Quit();
+
+    }
+
+    public void MainMenu()
+    {
+        Debug.Log("MAIN LOADING");
+        SceneManager.LoadScene("main_menu", LoadSceneMode.Single);
     }
 
 }
