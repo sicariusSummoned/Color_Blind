@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 /// <summary>
 /// Author: Dante Nardo
-/// Last Modified: 10/24/17
+/// Last Modified: 12/2/17
 /// Purpose: Defines a ghost version of the player script. Less collisions and mechanics.
 /// </summary>
 [RequireComponent(typeof(GhostController2D))]
@@ -10,7 +11,10 @@ public class GhostPlayer : MonoBehaviour
 {
     #region GhostPlayer Members
     private bool m_dead;
+    private bool m_dying;
     public bool Dead { get { return m_dead; } }
+    public bool Dying { get { return m_dying; } }
+    public float deathTime;
 
     private float moveSpeed = 6f;
 
@@ -42,8 +46,11 @@ public class GhostPlayer : MonoBehaviour
 
     private void Update()
     {
-        CalculateVelocity();
-        controller.Move(velocity * Time.deltaTime);//, directionalInput);
+        if (!Dying)
+        {
+            CalculateVelocity();
+            controller.Move(velocity * Time.deltaTime);
+        }
     }
 
     public void SetDirectionalInput(Vector2 input)
@@ -61,15 +68,21 @@ public class GhostPlayer : MonoBehaviour
 
     public void Die()
     {
-        m_dead = true;
-        gameObject.SetActive(false);
+        StartCoroutine(DeathTimer());
     }
 
     public void Respawn(Vector3 position)
     {
         m_dead = false;
         transform.position = position;
-        gameObject.SetActive(true);
+    }
+
+    private IEnumerator DeathTimer()
+    {
+        m_dying = true;
+        yield return new WaitForSeconds(deathTime);
+        m_dying = false;
+        m_dead = true;
     }
     #endregion
 }

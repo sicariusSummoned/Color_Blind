@@ -534,6 +534,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114456110989864132, guid: a704c6a5065334a4cb606c6c17d9dafa,
+        type: 2}
+      propertyPath: deathTime
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a704c6a5065334a4cb606c6c17d9dafa, type: 2}
   m_IsPrefabParent: 0
@@ -1004,6 +1009,11 @@ Prefab:
     - target: {fileID: 4885968676995178, guid: 21fc59a02dba54a4e8bd709a18dfe8e2, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114792351875957678, guid: 21fc59a02dba54a4e8bd709a18dfe8e2,
+        type: 2}
+      propertyPath: deathTime
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 21fc59a02dba54a4e8bd709a18dfe8e2, type: 2}
@@ -4276,6 +4286,11 @@ Prefab:
     - target: {fileID: 4627545924058964, guid: cde3da712bc5f9a4b85d58bece8f50a3, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114155415498657312, guid: cde3da712bc5f9a4b85d58bece8f50a3,
+        type: 2}
+      propertyPath: deathTime
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cde3da712bc5f9a4b85d58bece8f50a3, type: 2}

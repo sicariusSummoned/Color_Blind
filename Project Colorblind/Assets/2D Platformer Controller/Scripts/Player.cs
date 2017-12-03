@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 [RequireComponent(typeof(Controller2D))]
 public class Player : MonoBehaviour
@@ -18,12 +19,15 @@ public class Player : MonoBehaviour
 
     public Vector3 respawnPoint;
     public LevelManager gameLevelManager;
+    public float deathTime;
 
     public bool canDoubleJump;
     private bool isDoubleJumping = false;
 
     private bool m_dead;
+    private bool m_dying;
     public bool Dead { get { return m_dead; } }
+    public bool Dying { get { return m_dying; } }
 
     public float wallSlideSpeedMax = 3f;
     public float wallStickTime = .25f;
@@ -42,7 +46,6 @@ public class Player : MonoBehaviour
     private Vector2 directionalInput;
     private bool wallSliding;
     private int wallDirX;
-	//tells if the player is on a jump pad
 	private bool onPad;
 
     private void Start()
@@ -82,14 +85,17 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
-        CalculateVelocity();
-        HandleWallSliding();
-
-        controller.Move(velocity * Time.deltaTime, directionalInput);
-
-		if (controller.collisions.above || controller.collisions.below && onPad==false)
+        if (!Dying)
         {
-            velocity.y = 0f;
+            CalculateVelocity();
+            HandleWallSliding();
+
+            controller.Move(velocity * Time.deltaTime, directionalInput);
+
+            if (controller.collisions.above || controller.collisions.below && onPad == false)
+            {
+                velocity.y = 0f;
+            }
         }
     }
 
@@ -202,14 +208,20 @@ public class Player : MonoBehaviour
 
     public void Die()
     {
-        m_dead = true;
-        gameObject.SetActive(false);
+        StartCoroutine(DeathTimer());
     }
 
     public void Respawn(Vector3 position)
     {
         m_dead = false;
         transform.position = position;
-        gameObject.SetActive(true);
+    }
+
+    private IEnumerator DeathTimer()
+    {
+        m_dying = true;
+        yield return new WaitForSeconds(deathTime);
+        m_dying = false;
+        m_dead = true;
     }
 }
