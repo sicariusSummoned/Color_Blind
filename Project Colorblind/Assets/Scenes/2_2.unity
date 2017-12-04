@@ -4091,7 +4091,7 @@ Prefab:
     - target: {fileID: 114322950554882834, guid: d31af2a8e6d06a24799cba5d95150ee9,
         type: 2}
       propertyPath: m_animationDirection
-      value: N
+      value: S
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d31af2a8e6d06a24799cba5d95150ee9, type: 2}
