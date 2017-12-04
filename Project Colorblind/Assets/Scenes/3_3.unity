@@ -3685,6 +3685,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 212783168911667808, guid: ac50a3128cc2c084fb23373b371a8e3a,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac50a3128cc2c084fb23373b371a8e3a, type: 2}
   m_IsPrefabParent: 0
@@ -5352,6 +5357,11 @@ Prefab:
     - target: {fileID: 1297575530520072, guid: ac50a3128cc2c084fb23373b371a8e3a, type: 2}
       propertyPath: m_Name
       value: Spikes_Blue (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212783168911667808, guid: ac50a3128cc2c084fb23373b371a8e3a,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac50a3128cc2c084fb23373b371a8e3a, type: 2}
