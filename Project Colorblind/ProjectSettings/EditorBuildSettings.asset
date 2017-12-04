@@ -5,27 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 179199da6dc864e4cb49e95a559d3396
-  - enabled: 0
-    path: 
-    guid: dd21c9da6616c8149b77afcdad6c4b39
-  - enabled: 0
-    path: 
-    guid: d18dae7620c7a3f4b9483cab525a2b87
+  - enabled: 1
+    path: Assets/Scenes/main_menu.unity
+    guid: c159d060810a5374bbc1ecfea0e4d59c
   - enabled: 1
     path: Assets/Scenes/color_calibration.unity
     guid: 5c9e81f509a4e4941bf9957addd5a3f7
   - enabled: 1
     path: Assets/Scenes/level_skip.unity
     guid: 96bdf17707c0b9a45ad2be2b76300c20
-  - enabled: 0
-    path: Assets/Scenes/Template_Level.unity
-    guid: e71e887e4808fa047951463f0f25fcfd
-  - enabled: 0
-    path: Assets/Scenes/Traitor_Test.unity
-    guid: 69cde081c96b3df4182bf04cddec931b
   - enabled: 1
     path: Assets/Scenes/1_1.unity
     guid: b06d3fdd8dc7d7b458062d0178cc4c86
@@ -44,9 +32,3 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/1_6.unity
     guid: 9bef15f574295374aafb6b117c2d4dfa
-  - enabled: 0
-    path: 
-    guid: fd25f74eb8bf7074eb7d626be9801fae
-  - enabled: 1
-    path: Assets/Scenes/main_menu.unity
-    guid: c159d060810a5374bbc1ecfea0e4d59c
