@@ -144,7 +144,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wonLevel: 0
-  winDelay: 1
+  moveDelay: 2
+  rotDelay: 1
 --- !u!114 &114241668306552014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -169,6 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17ff96ce99b85c741a4a4b454a5435b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathTime: 2
 --- !u!114 &114910357461087338
 MonoBehaviour:
   m_ObjectHideFlags: 1

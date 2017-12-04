@@ -266,7 +266,7 @@ MonoBehaviour:
   wallLeap: {x: 0, y: 0}
   respawnPoint: {x: 0, y: 0, z: 0}
   gameLevelManager: {fileID: 0}
-  deathTime: 0
+  deathTime: 2
   canDoubleJump: 0
   wallSlideSpeedMax: 1000
   wallStickTime: 0
