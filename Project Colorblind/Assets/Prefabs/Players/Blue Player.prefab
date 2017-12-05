@@ -202,9 +202,11 @@ MonoBehaviour:
   wallLeap: {x: 0, y: 0}
   respawnPoint: {x: 0, y: 0, z: 0}
   gameLevelManager: {fileID: 0}
+  deathTime: 2
   canDoubleJump: 0
   wallSlideSpeedMax: 1000
   wallStickTime: 0
+  spriteRenderer: {fileID: 0}
 --- !u!114 &114422169487154982
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3720,7 +3722,7 @@ SpriteRenderer:
   m_Size: {x: 10, y: 10}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!331 &331553014340463690
 SpriteMask:
