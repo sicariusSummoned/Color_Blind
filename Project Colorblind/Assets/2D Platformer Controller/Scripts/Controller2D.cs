@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class Controller2D : RaycastController
 {
@@ -9,6 +10,10 @@ public class Controller2D : RaycastController
     public CollisionInfo collisions;
     [HideInInspector]
     public Vector2 playerInput;
+
+    public LayerMask passengerMask;
+    protected List<PassengerMovement> passengerMovement;
+    protected Dictionary<Transform, Controller2D> passengerDictionary = new Dictionary<Transform, Controller2D>();
 
     public override void Start()
     {
@@ -22,32 +27,44 @@ public class Controller2D : RaycastController
         Move(moveAmount, Vector2.zero, standingOnPlatform);
     }
 
-    public void Move(Vector2 moveAmount, Vector2 input, bool standingOnPlatform = false)
+    public void Move(Vector2 moveAmount, Vector2 input, bool standingOnPlatform = false, bool platformMove = false)
     {
+        // Update the raycast origins for collision checking
         UpdateRaycastOrigins();
+
+        // Player Movements
         collisions.Reset();
         collisions.moveAmountOld = moveAmount;
         playerInput = input;
 
+        // Set facing direction
         if (moveAmount.x != 0)
         {
             collisions.faceDir = (int)Mathf.Sign(moveAmount.x);
         }
 
-        if (moveAmount.y < 0)
-        {
-            DescendSlope(ref moveAmount);
-        }
-
+        // Check for collisions
         HorizontalCollisions(ref moveAmount);
-
-        if (moveAmount.y != 0)
-        {
+        //if (moveAmount.y != 0)
+        //{
             VerticalCollisions(ref moveAmount);
+        //}
+
+        // Calculate passenger movement
+        // Move self and passengers
+        if (platformMove)
+        {
+            CalculatePassengerMovement(moveAmount);
+            MovePassengers(true);
+            transform.Translate(moveAmount);
+            MovePassengers(false);
+        }
+        else
+        {
+            transform.Translate(moveAmount);
         }
 
-        transform.Translate(moveAmount);
-
+        // Determine whether or not there are collisions below
         if (standingOnPlatform)
         {
             collisions.below = true;
@@ -205,7 +222,13 @@ public class Controller2D : RaycastController
                 }
 
                 collisions.below = directionY == -1;
-                collisions.above = directionY == 1;
+
+                if (hit.collider.tag != "RedPlayer" || 
+                    hit.collider.tag != "GreenPlayer" ||
+                    hit.collider.tag != "BluePlayer")
+                {
+                    collisions.above = directionY == 1;
+                }
             }
         }
 
@@ -231,6 +254,55 @@ public class Controller2D : RaycastController
     private void ResetFallingThroughPlatform()
     {
         collisions.fallingThroughPlatform = false;
+    }
+
+    protected void MovePassengers(bool beforeMovePlatform)
+    {
+        foreach (PassengerMovement passenger in passengerMovement)
+        {
+            if (passengerMovement.Count > 1)
+                Debug.Log("Oh my!");
+
+            if (!passengerDictionary.ContainsKey(passenger.transform))
+            {
+                passengerDictionary.Add(passenger.transform, passenger.transform.GetComponent<Controller2D>());
+            }
+
+            if (passenger.moveBeforePlatform == beforeMovePlatform)
+            {
+                passengerDictionary[passenger.transform].Move(passenger.velocity, passenger.standingOnPlatform);
+            }
+        }
+    }
+
+    protected void CalculatePassengerMovement(Vector3 velocity)
+    {
+        HashSet<Transform> movedPassengers = new HashSet<Transform>();
+        passengerMovement = new List<PassengerMovement>();
+
+        float directionX = Mathf.Sign(velocity.x);
+        float directionY = Mathf.Sign(velocity.y);
+        float rayLength = skinWidth * 2;//coll.bounds.size.y + skinWidth;
+
+        for (int i = 0; i < verticalRayCount; i++)
+        {
+            Vector2 rayOrigin = raycastOrigins.topLeft;
+            rayOrigin += Vector2.right * (verticalRaySpacing * i);
+            RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.up, rayLength, passengerMask);
+
+            if (hit && hit.distance != 0)
+            {
+                if (!movedPassengers.Contains(hit.transform))
+                {
+                    movedPassengers.Add(hit.transform);
+                    float pushX = velocity.x;
+                    float pushY = velocity.y - (hit.distance - skinWidth);
+
+                    passengerMovement.Add(new PassengerMovement(hit.transform, new Vector3(pushX, pushY), true, true));
+                }
+            }
+        }
+        
     }
 
     public struct CollisionInfo

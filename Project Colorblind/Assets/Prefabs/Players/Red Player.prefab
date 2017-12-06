@@ -216,6 +216,9 @@ MonoBehaviour:
   coll: {fileID: 0}
   fallingThroughPlatformResetTimer: 0.1
   playerInput: {x: 0, y: 0}
+  passengerMask:
+    serializedVersion: 2
+    m_Bits: 6144
 --- !u!114 &114372447039820890
 MonoBehaviour:
   m_ObjectHideFlags: 1
