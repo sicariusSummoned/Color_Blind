@@ -623,6 +623,10 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: EndCalibration
       objectReference: {fileID: 0}
+    - target: {fileID: 1012133469498792, guid: 49f8fead4e753de4b9b37c5a91172213, type: 2}
+      propertyPath: m_TagString
+      value: Calibrate
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49f8fead4e753de4b9b37c5a91172213, type: 2}
   m_IsPrefabParent: 0
@@ -1494,6 +1498,10 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: DectivateCalibration
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016376742128350, guid: 32e42e7f4e04f744e9364aec9564e20e, type: 2}
+      propertyPath: m_TagString
+      value: PauseMenu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 32e42e7f4e04f744e9364aec9564e20e, type: 2}
@@ -5618,6 +5626,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1448051525955652, guid: 4ffad2b22e362f245b9ca99f7526d2f8, type: 2}
+      propertyPath: m_TagString
+      value: ColorManager
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4ffad2b22e362f245b9ca99f7526d2f8, type: 2}
   m_IsPrefabParent: 0
@@ -6042,6 +6054,10 @@ Prefab:
       propertyPath: calibrateCanvas
       value: 
       objectReference: {fileID: 1174045443}
+    - target: {fileID: 1436373247889942, guid: 9f6a33701f9b82b4cadff9d6a5fc0d43, type: 2}
+      propertyPath: m_TagString
+      value: GameManager
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f6a33701f9b82b4cadff9d6a5fc0d43, type: 2}
   m_IsPrefabParent: 0

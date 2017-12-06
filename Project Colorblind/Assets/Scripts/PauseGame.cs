@@ -3,26 +3,28 @@ using UnityEngine.SceneManagement;
 
 public class PauseGame : MonoBehaviour
 {
-    public static GameObject colorManager;
+    //public static GameObject colorManagerGame;
     private Scene current;
-    public static GameObject InstancePause;
-    public static GameObject InstanceCalibrate;
+   // public static GameObject pauseCanvas;
+    //public static GameObject calibrateCanvas;
     public GameObject pauseCanvas;
     public GameObject calibrateCanvas;
     public GameObject colorManagerGame;
+
+    private GameObject[] pauses;
+    private GameObject[] calibrates;
+    private GameObject[] colors;
 
 
     public void Start()
     {
         // Destroy if there are multiple instances
-       // if (InstancePause != null && InstancePause != this)
-           // Destroy(InstancePause.gameObject);
-        if (InstanceCalibrate != null && InstanceCalibrate != this)
-            Destroy(InstanceCalibrate.gameObject);
+       // if (pauseCanvas != null && pauseCanvas != this)
+           // Destroy(pauseCanvas.gameObject);
+       // if (calibrateCanvas != null && calibrateCanvas != this)
+            //Destroy(calibrateCanvas.gameObject);
 
-        colorManager = colorManagerGame;
-        InstancePause = pauseCanvas;
-        InstanceCalibrate = calibrateCanvas;
+
     }
     void Update()
     {
@@ -31,41 +33,72 @@ public class PauseGame : MonoBehaviour
         {
             Pause();
         }
+
+        pauses = GameObject.FindGameObjectsWithTag("PauseMenu");
+        calibrates = GameObject.FindGameObjectsWithTag("Calibrate");
+        colors = GameObject.FindGameObjectsWithTag("ColorManager");
+        if(pauses.Length > 1)
+        {
+            for(int i =0; i < pauses.Length; i++)
+            {
+                pauses[i] = null;
+                pauseCanvas = pauses[0];
+            }
+        }
+        if (calibrates.Length > 1)
+        {
+            for (int i = 0; i < calibrates.Length; i++)
+            {
+                calibrates[i] = null;
+                calibrateCanvas = calibrates[0];
+            }
+        }
+        if (colors.Length > 1)
+        {
+            for (int i = 0; i < colors.Length; i++)
+            {
+                colors[i] = null;
+                colorManagerGame = colors[0];
+            }
+        }
+
+       
+        
     }
 
 
     public void Pause()
     {
-        if (InstancePause.activeInHierarchy == false)
+        if (pauseCanvas.activeInHierarchy == false)
         {
-            InstancePause.SetActive(true);
+            pauseCanvas.SetActive(true);
             Time.timeScale = 0;
         }
         else
         {
             Time.timeScale = 1;
-            InstancePause.SetActive(false);
+            pauseCanvas.SetActive(false);
         }
     }
 
     public void Awake()
     {
         DontDestroyOnLoad(this);
-        //DontDestroyOnLoad(InstancePause);
-        DontDestroyOnLoad(InstanceCalibrate);
-        DontDestroyOnLoad(colorManager);
+        DontDestroyOnLoad(pauseCanvas);
+        DontDestroyOnLoad(calibrateCanvas);
+        DontDestroyOnLoad(colorManagerGame);
 
     }
     public void ActivateCalibration()
     {
-        InstanceCalibrate.SetActive(true);
-        InstancePause.SetActive(false);
+        calibrateCanvas.SetActive(true);
+        pauseCanvas.SetActive(false);
     }
 
     public void DectivateCalibration()
     {
-        InstanceCalibrate.SetActive(false);
-        InstancePause.SetActive(true);
+        calibrateCanvas.SetActive(false);
+        pauseCanvas.SetActive(true);
     }
 
     public void Quitting()
@@ -78,6 +111,7 @@ public class PauseGame : MonoBehaviour
     public void MainMenu()
     {
         Debug.Log("MAIN LOADING");
+        pauseCanvas.SetActive(false);
         SceneManager.LoadScene("main_menu", LoadSceneMode.Single);
     }
 
