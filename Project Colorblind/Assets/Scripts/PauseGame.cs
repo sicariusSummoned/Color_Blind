@@ -3,12 +3,31 @@ using UnityEngine.SceneManagement;
 
 public class PauseGame : MonoBehaviour
 {
+    public static GameObject colorManager;
+    private Scene current;
+    public static GameObject InstancePause;
+    public static GameObject InstanceCalibrate;
     public GameObject pauseCanvas;
-    public GameObject calibrationCanvas;
-    
+    public GameObject calibrateCanvas;
+    public GameObject colorManagerGame;
+
+
+    public void Start()
+    {
+        // Destroy if there are multiple instances
+       // if (InstancePause != null && InstancePause != this)
+           // Destroy(InstancePause.gameObject);
+        if (InstanceCalibrate != null && InstanceCalibrate != this)
+            Destroy(InstanceCalibrate.gameObject);
+
+        colorManager = colorManagerGame;
+        InstancePause = pauseCanvas;
+        InstanceCalibrate = calibrateCanvas;
+    }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        current = SceneManager.GetActiveScene();
+        if (Input.GetKeyDown(KeyCode.Escape)&& current.name != "main_menu")
         {
             Pause();
         }
@@ -17,28 +36,36 @@ public class PauseGame : MonoBehaviour
 
     public void Pause()
     {
-        if (pauseCanvas.activeInHierarchy == false)
+        if (InstancePause.activeInHierarchy == false)
         {
-            pauseCanvas.SetActive(true);
+            InstancePause.SetActive(true);
             Time.timeScale = 0;
         }
         else
         {
             Time.timeScale = 1;
-            pauseCanvas.SetActive(false);
+            InstancePause.SetActive(false);
         }
     }
 
+    public void Awake()
+    {
+        DontDestroyOnLoad(this);
+        //DontDestroyOnLoad(InstancePause);
+        DontDestroyOnLoad(InstanceCalibrate);
+        DontDestroyOnLoad(colorManager);
+
+    }
     public void ActivateCalibration()
     {
-        calibrationCanvas.SetActive(true);
-        pauseCanvas.SetActive(false);
+        InstanceCalibrate.SetActive(true);
+        InstancePause.SetActive(false);
     }
 
     public void DectivateCalibration()
     {
-        calibrationCanvas.SetActive(false);
-        pauseCanvas.SetActive(true);
+        InstanceCalibrate.SetActive(false);
+        InstancePause.SetActive(true);
     }
 
     public void Quitting()
