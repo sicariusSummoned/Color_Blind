@@ -90,7 +90,7 @@ public class Player : MonoBehaviour
             CalculateVelocity();
             HandleWallSliding();
 
-            controller.Move(velocity * Time.deltaTime, directionalInput);
+            controller.Move(velocity * Time.deltaTime, directionalInput, false, true);
 
             if (controller.collisions.above || controller.collisions.below && onPad == false)
             {
