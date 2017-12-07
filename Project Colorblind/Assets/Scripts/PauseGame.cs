@@ -3,15 +3,34 @@ using UnityEngine.SceneManagement;
 
 public class PauseGame : MonoBehaviour
 {
+    //public static GameObject colorManagerGame;
+    private Scene current;
+   // public static GameObject pauseCanvas;
+    //public static GameObject calibrateCanvas;
     public GameObject pauseCanvas;
-    public GameObject calibrationCanvas;
-    
+    public GameObject calibrateCanvas;
+    public GameObject colorManagerGame;
+
+
+
+    public void Start()
+    {
+        // Destroy if there are multiple instances
+       // if (pauseCanvas != null && pauseCanvas != this)
+           // Destroy(pauseCanvas.gameObject);
+       // if (calibrateCanvas != null && calibrateCanvas != this)
+            //Destroy(calibrateCanvas.gameObject);
+
+
+    }
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Pause();
         }
+			
     }
 
 
@@ -28,16 +47,17 @@ public class PauseGame : MonoBehaviour
             pauseCanvas.SetActive(false);
         }
     }
+		
 
     public void ActivateCalibration()
     {
-        calibrationCanvas.SetActive(true);
+        calibrateCanvas.SetActive(true);
         pauseCanvas.SetActive(false);
     }
 
     public void DectivateCalibration()
     {
-        calibrationCanvas.SetActive(false);
+        calibrateCanvas.SetActive(false);
         pauseCanvas.SetActive(true);
     }
 
@@ -51,6 +71,7 @@ public class PauseGame : MonoBehaviour
     public void MainMenu()
     {
         Debug.Log("MAIN LOADING");
+        pauseCanvas.SetActive(false);
         SceneManager.LoadScene("main_menu", LoadSceneMode.Single);
     }
 

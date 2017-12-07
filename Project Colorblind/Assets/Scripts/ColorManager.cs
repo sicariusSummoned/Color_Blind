@@ -43,14 +43,25 @@ public class ColorManager : MonoBehaviour
     #region ColorManager Methods
     private void Awake()
     {
-        // Destroy if there are multiple instances
-        if (Instance != null && Instance != this)
-            //Destroy(gameObject);
 
         // Stay persistent between levels
-        DontDestroyOnLoad(gameObject);
-        Instance = this;
+     //   DontDestroyOnLoad(this);
+        //DontDestroyOnLoad(gameObject);
 
+    }
+
+    private void Start()
+    {
+        // Destroy if there are multiple instances
+        if (Instance != null && Instance != this)
+            Destroy(gameObject);
+        Instance = this;
+        GetColors();
+        SetColors();
+    }
+
+    public void GetColors()
+    {
         m_redSprites = new List<SpriteRenderer>();
         m_greenSprites = new List<SpriteRenderer>();
         m_blueSprites = new List<SpriteRenderer>();
@@ -69,7 +80,7 @@ public class ColorManager : MonoBehaviour
         else GetBlue();
     }
 
-    private void Start()
+    public void SetColors()
     {
         // Red Objects
         foreach (var red in GameObject.FindGameObjectsWithTag("Red"))
