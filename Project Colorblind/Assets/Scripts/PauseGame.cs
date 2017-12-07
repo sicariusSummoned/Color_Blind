@@ -11,9 +11,6 @@ public class PauseGame : MonoBehaviour
     public GameObject calibrateCanvas;
     public GameObject colorManagerGame;
 
-    private GameObject[] pauses;
-    private GameObject[] calibrates;
-    private GameObject[] colors;
 
 
     public void Start()
@@ -28,42 +25,12 @@ public class PauseGame : MonoBehaviour
     }
     void Update()
     {
-        current = SceneManager.GetActiveScene();
-        if (Input.GetKeyDown(KeyCode.Escape)&& current.name != "main_menu")
+
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             Pause();
         }
-
-        pauses = GameObject.FindGameObjectsWithTag("PauseMenu");
-        calibrates = GameObject.FindGameObjectsWithTag("Calibrate");
-        colors = GameObject.FindGameObjectsWithTag("ColorManager");
-        if(pauses.Length > 1)
-        {
-            for(int i =0; i < pauses.Length; i++)
-            {
-                pauses[i] = null;
-                pauseCanvas = pauses[0];
-            }
-        }
-        if (calibrates.Length > 1)
-        {
-            for (int i = 0; i < calibrates.Length; i++)
-            {
-                calibrates[i] = null;
-                calibrateCanvas = calibrates[0];
-            }
-        }
-        if (colors.Length > 1)
-        {
-            for (int i = 0; i < colors.Length; i++)
-            {
-                colors[i] = null;
-                colorManagerGame = colors[0];
-            }
-        }
-
-       
-        
+			
     }
 
 
@@ -80,15 +47,8 @@ public class PauseGame : MonoBehaviour
             pauseCanvas.SetActive(false);
         }
     }
+		
 
-    public void Awake()
-    {
-        DontDestroyOnLoad(this);
-        DontDestroyOnLoad(pauseCanvas);
-        DontDestroyOnLoad(calibrateCanvas);
-        DontDestroyOnLoad(colorManagerGame);
-
-    }
     public void ActivateCalibration()
     {
         calibrateCanvas.SetActive(true);

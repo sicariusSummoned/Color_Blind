@@ -45,8 +45,8 @@ public class ColorManager : MonoBehaviour
     {
 
         // Stay persistent between levels
-        DontDestroyOnLoad(this);
-        DontDestroyOnLoad(gameObject);
+     //   DontDestroyOnLoad(this);
+        //DontDestroyOnLoad(gameObject);
 
     }
 
