@@ -93,15 +93,15 @@ public class MenuScript : MonoBehaviour {
     }
     public void level34()
     {
-       // SceneManager.LoadScene("3_4", LoadSceneMode.Single);
+       SceneManager.LoadScene("3_4", LoadSceneMode.Single);
     }
     public void level35()
     {
-        //SceneManager.LoadScene("3_5", LoadSceneMode.Single);
+        SceneManager.LoadScene("3_5", LoadSceneMode.Single);
     }
     public void level36()
     {
-      //  SceneManager.LoadScene("3_6", LoadSceneMode.Single);
+       SceneManager.LoadScene("3_6", LoadSceneMode.Single);
     }
     public void quitting()
     {
