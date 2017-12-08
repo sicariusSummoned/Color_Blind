@@ -2,7 +2,7 @@
 
 /// <summary>
 /// Author: Dante Nardo
-/// Last Modified: 11/2/2017
+/// Last Modified: 12/7/2017
 /// Purpose: Singleton that triggers events.
 /// </summary>
 public class EventManager : MonoBehaviour
@@ -35,9 +35,9 @@ public class EventManager : MonoBehaviour
         if (Instance != null && Instance != this)
             Destroy(gameObject);
 
-            // Stay persistent between levels
-            // DontDestroyOnLoad(gameObject);
-            Instance = this;
+        // Stay persistent between levels
+        //DontDestroyOnLoad(gameObject);
+        Instance = this;
     }
 
     public void ProcessCollision(RaycastHit2D hit, string tag)

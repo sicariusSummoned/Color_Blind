@@ -57,7 +57,7 @@ public class Controller2D : RaycastController
             CalculatePassengerMovement(moveAmount);
             MovePassengers(true);
             transform.Translate(moveAmount);
-            MovePassengers(false);
+            //MovePassengers(false);
         }
         else
         {
@@ -213,8 +213,13 @@ public class Controller2D : RaycastController
                         continue;
                     }
                 }
-                moveAmount.y = (hit.distance - skinWidth) * directionY;
-                rayLength = hit.distance;
+
+                // Do not update movement amount when there is a player on your head
+                if (!(directionY == 1 && hit.collider.tag == "Player"))
+                {
+                    moveAmount.y = (hit.distance - skinWidth) * directionY;
+                    rayLength = hit.distance;
+                }
 
                 if (collisions.climbingSlope)
                 {
@@ -223,9 +228,7 @@ public class Controller2D : RaycastController
 
                 collisions.below = directionY == -1;
 
-                if (hit.collider.tag != "RedPlayer" || 
-                    hit.collider.tag != "GreenPlayer" ||
-                    hit.collider.tag != "BluePlayer")
+                if (hit.collider.tag != "Player")
                 {
                     collisions.above = directionY == 1;
                 }

@@ -73,16 +73,19 @@ public class Player : MonoBehaviour
 		set{ onPad = value; }
 
 	}
+
     public Vector3 Velocity
     {
         get { return velocity; }
         set { velocity = value; }
     }
+
     public float Gravity
     {
         get { return gravity; }
         
     }
+
     private void Update()
     {
         if (!Dying)
@@ -94,7 +97,8 @@ public class Player : MonoBehaviour
 
             if (controller.collisions.above || controller.collisions.below && onPad == false)
             {
-                velocity.y = 0f;
+                if (!controller.collisions.above)
+                    velocity.y = 0f;
             }
         }
     }
