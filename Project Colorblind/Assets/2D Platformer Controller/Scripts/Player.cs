@@ -212,6 +212,7 @@ public class Player : MonoBehaviour
 
     public void Die()
     {
+        SoundManager.instance.PlayDeathSound(3);
         StartCoroutine(DeathTimer());
     }
 

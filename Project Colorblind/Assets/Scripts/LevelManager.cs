@@ -39,6 +39,7 @@ public class LevelManager : MonoBehaviour
         {
             if (PlayerNear())
             {
+                SoundManager.instance.PlayDoorSound();
                 levelWon = true;
             }
         }

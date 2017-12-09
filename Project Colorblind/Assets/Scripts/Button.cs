@@ -11,7 +11,7 @@ public class Button : Trigger
 
     [Header("N, S, E, or W (North, south...etc)")]
     public string m_animationDirection;
-    public float m_speed;
+    private float m_speed = 0.25f;
     #endregion
 
     #region Button Methods
@@ -40,6 +40,10 @@ public class Button : Trigger
 
         // Set to activated which 
         m_activated = true;
+
+        // Play sound
+        SoundManager.instance.PlayButtonSound();
+
     }
     #endregion
 }
