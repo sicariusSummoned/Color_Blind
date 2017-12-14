@@ -95,8 +95,8 @@ public class MaskController : MonoBehaviour {
         {
             if (!wasDown)
             {
-                CycleActiveSprite();
-                wasDown = true;
+                //CycleActiveSprite();
+                //wasDown = true;
             }
         }
         else
