@@ -9,6 +9,10 @@ public class MenuScript : MonoBehaviour {
     public GameObject mainMenu;
     public GameObject selectMenu;
     public GameObject creditMenu;
+	public GameObject warningImg;
+	public GameObject creditsImg;
+	public GameObject scrollImg;
+	public GameObject mainImg;
 
 	// Use this for initialization
 	void Start () {
@@ -27,6 +31,10 @@ public class MenuScript : MonoBehaviour {
         warningMenu.gameObject.SetActive(false);
         selectMenu.gameObject.SetActive(false);
         creditMenu.gameObject.SetActive(false);
+		mainImg.SetActive (true);
+		warningImg.SetActive (false);
+		scrollImg.SetActive (false);
+		creditsImg.SetActive (false);
     }
 
     public void play()
@@ -114,6 +122,8 @@ public class MenuScript : MonoBehaviour {
         mainMenu.gameObject.SetActive(false);
         selectMenu.gameObject.SetActive(true);
         creditMenu.gameObject.SetActive(false);
+		mainImg.SetActive (false);
+		scrollImg.SetActive (true);
     }
 
     public void toCredits()
@@ -122,6 +132,8 @@ public class MenuScript : MonoBehaviour {
         mainMenu.gameObject.SetActive(false);
         selectMenu.gameObject.SetActive(false);
         creditMenu.gameObject.SetActive(true);
+		mainImg.SetActive (false);
+		creditsImg.SetActive (true);
     }
 
 }
