@@ -10,6 +10,8 @@ public class PauseGame : MonoBehaviour
     public GameObject pauseCanvas;
     public GameObject calibrateCanvas;
     public GameObject colorManagerGame;
+	public GameObject controlls;
+	public GameObject pauseMenu;
 
 
 
@@ -63,16 +65,27 @@ public class PauseGame : MonoBehaviour
 
     public void Quitting()
     {
-        Debug.Log("Quitting");
+        
         Application.Quit();
 
     }
 
     public void MainMenu()
     {
-        Debug.Log("MAIN LOADING");
+       
         pauseCanvas.SetActive(false);
         SceneManager.LoadScene("main_menu", LoadSceneMode.Single);
     }
+
+	public void ControllMenu()
+	{
+		controlls.SetActive (true);
+		pauseMenu.SetActive (false);
+	}
+
+	public void returnControlls(){
+		controlls.SetActive (false);
+		pauseMenu.SetActive (true);
+	}
 
 }
