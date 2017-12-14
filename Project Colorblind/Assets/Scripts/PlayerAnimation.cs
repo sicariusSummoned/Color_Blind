@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlayerAnimation : MonoBehaviour {
 
     private Player player;
+    private SpriteRenderer sprite;
+    private GameObject[] playersGO;
+    private Player[] players;
 
     private float velocity;
     private Animator fillControl;
@@ -21,6 +24,12 @@ public class PlayerAnimation : MonoBehaviour {
     public float rotDelay = 1.0f;
     private float rotTimer;
 
+    private bool dying;
+    private bool dead;
+    private bool justDied;
+    private float deathTimer = 0f;
+    private float deathTimeLimit;
+
     public bool NextLevel
     {
         get { return nextLevel; }
@@ -33,6 +42,13 @@ public class PlayerAnimation : MonoBehaviour {
         {
             player = gameObject.GetComponent<Player>();
             Control = transform.Find("Graphics").GetComponent<Animator>();
+            deathTimeLimit = gameObject.GetComponent<Player>().deathTime;
+            sprite = transform.Find("Graphics").GetComponent<SpriteRenderer>();
+            playersGO = GameObject.FindGameObjectsWithTag("Player");
+            //for(int i = 0; i < playersGO.Length; i++)
+            //{
+            //    players[i] = playersGO[i].GetComponent<Player>();
+            //}
         }
     }
 	
@@ -40,14 +56,48 @@ public class PlayerAnimation : MonoBehaviour {
 	void Update () {
         if (gameObject.tag == "Player")
         {
-            velocity = player.GetDirectionalInput().x;
-            if (velocity != 0)
+            dying = gameObject.GetComponent<Player>().Dying;
+            dead = gameObject.GetComponent<Player>().Dead;
+            if (!dying)
             {
-                Control.SetBool("Moving", true);
+                velocity = player.GetDirectionalInput().x;
+                if (velocity != 0)
+                {
+                    Control.SetBool("Moving", true);
+                }
+                else if (velocity == 0)
+                {
+                    Control.SetBool("Moving", false);
+                }
             }
-            else if (velocity == 0)
+            else
             {
+                //if (!justdied)
+                //{
+                //    for (int i = 0; i < players.length; i++)
+                //    {
+                //        players[i].dying = true;
+                //    }
+                //    justdied = true;
+                //}
+
                 Control.SetBool("Moving", false);
+                Control.SetBool("Dead", true);
+                deathTimer += Time.deltaTime;
+                if(deathTimer <= deathTimeLimit)
+                {
+                    float spriteLerp = Mathf.Lerp(0f, .5f, deathTimer);
+                    sprite.color = new Color(1f, 1f, 1f, spriteLerp);
+
+                }
+                Debug.Log(deathTimer);
+            }
+            if(dead)
+            {
+                Control.SetBool("Dead", false);
+                justDied = false;
+
+                deathTimer = 0f;
             }
         }
 
