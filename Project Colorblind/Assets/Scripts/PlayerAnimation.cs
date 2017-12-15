@@ -86,7 +86,7 @@ public class PlayerAnimation : MonoBehaviour {
                 deathTimer += Time.deltaTime;
                 if(deathTimer <= deathTimeLimit)
                 {
-                    float spriteLerp = Mathf.Lerp(0f, .5f, deathTimer);
+                    float spriteLerp = Mathf.Lerp(0f, 1f, deathTimer);
                     sprite.color = new Color(1f, 1f, 1f, spriteLerp);
 
                 }

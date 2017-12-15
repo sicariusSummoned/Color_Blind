@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 /// <summary>
 /// Author: Dante Nardo
-/// Last Modified: 12/7/2017
+/// Last Modified: 12/14/2017
 /// Purpose: Singleton that triggers events.
 /// </summary>
 public class EventManager : MonoBehaviour
@@ -26,6 +27,11 @@ public class EventManager : MonoBehaviour
     public delegate void ButtonHitEvent(int id);
     public event ButtonHitEvent OnButtonHit;
     #endregion
+
+    #region EventManager Player References
+    List<Player> m_players;
+    List<GhostPlayer> m_ghostPlayers;
+    #endregion
     #endregion
 
     #region EventManager Methods
@@ -38,14 +44,29 @@ public class EventManager : MonoBehaviour
         // Stay persistent between levels
         //DontDestroyOnLoad(gameObject);
         Instance = this;
+
+        // Get Players
+        m_players = new List<Player>();
+        foreach (var player in GameObject.FindGameObjectsWithTag("Player"))
+        {
+            m_players.Add(player.GetComponent<Player>());
+        }
+
+        // Get Ghost Players
+        m_ghostPlayers = new List<GhostPlayer>();
+        foreach (var ghostPlayer in GameObject.FindGameObjectsWithTag("SpotlightPlayer"))
+        {
+            m_ghostPlayers.Add(ghostPlayer.GetComponent<GhostPlayer>());
+        }
     }
 
     public void ProcessCollision(RaycastHit2D hit, string tag)
     {
-        if (tag == "RedKillsPlayer" ||
+        if ((tag == "RedKillsPlayer" ||
             tag == "GreenKillsPlayer" ||
             tag == "BlueKillsPlayer" ||
-            tag == "WhiteKillsPlayer")
+            tag == "WhiteKillsPlayer") &&
+            PlayersNotDyingOrDead())
         {
             Instance.PlayerDeath();
             return;
@@ -86,6 +107,19 @@ public class EventManager : MonoBehaviour
     {
         if (OnFadeBlock != null)
             OnFadeBlock();
+    }
+
+    private bool PlayersNotDyingOrDead()
+    {
+        foreach (var player in m_players)
+            if (player.Dying || player.Dead)
+                return false;
+
+        foreach (var ghostPlayer in m_ghostPlayers)
+            if (ghostPlayer.Dying || ghostPlayer.Dead)
+                return false;
+
+        return true;
     }
     #endregion
 }
