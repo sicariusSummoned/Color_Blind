@@ -2,7 +2,7 @@
 
 /// <summary>
 /// Author: Dante Nardo
-/// Last Modified: 12/2/2017
+/// Last Modified: 12/14/2017
 /// Purpose: Respawns a player at its position if one dies.
 /// </summary>
 public class CheckPointSystem : MonoBehaviour
@@ -68,35 +68,62 @@ public class CheckPointSystem : MonoBehaviour
 
     private void RespawnPlayers()
     {
+        // HACK: Finds the farthest index to spawn at for each checkpoint list
+        int farthest = 0;
+
+        // Red is farthest ahead so spawn at their checkpoints
+        if (m_waypointIndexRed > m_waypointIndexGreen &&
+            m_waypointIndexRed > m_waypointIndexBlue)
+        {
+            farthest = m_waypointIndexRed;
+        }
+        // Green is farthest ahead so spawn at their checkpoints
+        else if (m_waypointIndexGreen > m_waypointIndexRed &&
+                 m_waypointIndexGreen > m_waypointIndexBlue)
+        {
+            farthest = m_waypointIndexGreen;
+        }
+        // Blue is farthest ahead so spawn at their checkpoints
+        else if (m_waypointIndexBlue > m_waypointIndexRed &&
+                 m_waypointIndexBlue > m_waypointIndexGreen)
+        {
+            farthest = m_waypointIndexBlue;
+        }
+        // They are all at equal distances
+        else
+        {
+            farthest = m_waypointIndexRed;
+        }
+
         if (m_redPlayer != null)
         {
-            m_redPlayer.Respawn(m_waypointsRed[m_waypointIndexRed].transform.position);
+            m_redPlayer.Respawn(m_waypointsRed[farthest].transform.position);
 
             foreach (var ghostPlayer in m_ghostPlayers)
-                ghostPlayer.Respawn(m_waypointsRed[m_waypointIndexRed].transform.position);
+                ghostPlayer.Respawn(m_waypointsRed[farthest].transform.position);
             m_ghostsRespawned = true;
         }
 
         if (m_greenPlayer != null)
         {
-            m_greenPlayer.Respawn(m_waypointsGreen[m_waypointIndexGreen].transform.position);
+            m_greenPlayer.Respawn(m_waypointsGreen[farthest].transform.position);
 
             if (!m_ghostsRespawned)
             {
                 foreach (var ghostPlayer in m_ghostPlayers)
-                    ghostPlayer.Respawn(m_waypointsGreen[m_waypointIndexGreen].transform.position);
+                    ghostPlayer.Respawn(m_waypointsGreen[farthest].transform.position);
                 m_ghostsRespawned = true;
             }
         }
 
         if (m_bluePlayer != null)
         {
-            m_bluePlayer.Respawn(m_waypointsBlue[m_waypointIndexBlue].transform.position);
+            m_bluePlayer.Respawn(m_waypointsBlue[farthest].transform.position);
 
             if (!m_ghostsRespawned)
             {
                 foreach (var ghostPlayer in m_ghostPlayers)
-                    ghostPlayer.Respawn(m_waypointsBlue[m_waypointIndexBlue].transform.position);
+                    ghostPlayer.Respawn(m_waypointsBlue[farthest].transform.position);
             }
         }
 
