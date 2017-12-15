@@ -3067,7 +3067,7 @@ Prefab:
         type: 2}
       propertyPath: m_players.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 399275061}
     - target: {fileID: 114993369661074724, guid: 6ad859d63d8b8d74b83cef871def029c,
         type: 2}
       propertyPath: m_nextLevel
