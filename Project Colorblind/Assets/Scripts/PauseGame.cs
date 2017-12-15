@@ -74,6 +74,7 @@ public class PauseGame : MonoBehaviour
     {
        
         pauseCanvas.SetActive(false);
+        Time.timeScale = 1;
         SceneManager.LoadScene("main_menu", LoadSceneMode.Single);
     }
 
